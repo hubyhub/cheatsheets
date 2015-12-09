@@ -499,7 +499,7 @@ CSRF takes advantage of the fact that:
 
 
 Prevent XSRF:
-In clude an unpredictable token of some kind in the body, the URL or
+Include an unpredictable token of some kind in the body, the URL or
 the headers that are sent between the client and server.
 In some implementations this additional token might be unique to that particular session,
 while in other implementations this token is unique to the individual request being made.
@@ -513,11 +513,13 @@ submitted URL. Should you choose to place the token within the URL, be aware tha
 does create a potential exposure point where that token could be intercepted by the attacker.
 
 
-Another way to protect against XSRF
-by requiring the user to re-authenticate with his actual credentials whenever any substantial change will happen within the application.
+Another way to protect against XSRF might be by requiring the user to re-authenticate with his actual credentials whenever any substantial change in state will happen within the application.
 
-OWASP CSRF guard Project contains  a library for PHP, JAVA, .NET. 
-ESAPI from OWASP contains token generators 
+For example, most operating systems will require you to enter your current password before allowing you to set a new password. In a similar way, our web application would now require the user to re-authenticate whenever something like a password change, funds transfer, access to personally identifiable information, or any other significant activity were about to take place.
+
+For some additional guidance and assistance in protecting your applications against cross site request forgery, you may wish to look at the OWASP CSRFguard project. This project provides a library that can be used to mitigate the risk of cross site request forgery in Java, .net, and PHP applications. Additionally, the ESAPI from OWASP includes a variety of token generators and validation functions that could be used as the basis for a cross site request forgery protection library.
+
+In summary, cross site request forgery takes advantage of the fact that it is the browser that is authenticated rather than the user, and requires that we include some form of unique token beyond the session token or perhaps require re-authentication of the user prior to any significant activity.
 
 ## 9. Using Known Vulnerable Components
 --> Components need to be uptodate.
@@ -533,12 +535,32 @@ How to maintain the application:
 
 ## 10. Unvalidated Redirects and Forwards
 
-*) takes advantages the users trust in a website
-*) user is sent to a 
-*) captive portals (e.g.: login to WIFI)
+* This is relatively common issue that takes advantage of a user’s trust of a website.
+	Imagine that you receive an email from someone you know asking you to visit a link that’s included in the email. Rather than click directly on the link, you hover your mouse over the link to verify where it really goes. When you do so, you discover that it really does point to the website written in the email. Even though the note is somewhat unusual, based on the fact that you know the person and that the link appears to go to a legitimate website you click on the link. Unfortunately, while your browser goes to the website that you thought it should, it is immediately redirected to another site that attempts to attack your system or steal your credentials.
+	What we have just described is an attacker taking advantage of an unvalidated redirect or forward. Quite often, web applications include a piece of code that can be used to redirect the user. It takes a parameter, often in the URL, that is a reference to the page to be loaded. Often the referenced code, when accessed through a web browser, will return an HTTP 302 “Moved Permanently” message that includes the referenced parameter. This forces the browser to redirect to a different URL.
 
-In conclusion, including code that will redirect
-a user to an external resource can be abused by attackers
+	Why is such a feature so common? Think for a moment about how websites and web applications evolve over time. Not only does the structure of a website change, but we may even find that the domain name in use changes. At the same time, we are often interested in maintaining as large a footprint as possible within search engines. This means that, should we reorganize resources on our website, we may now have inbound dead links.
+
+	Rather than return a 404 “Not Found” message, we would much rather redirect the user to either the correct page or to a page that can provide additional information. Enter the redirect code.
+
+Another reason for using redirects and forwards are captive portals. As you likely know, in a captive portal system users will not be permitted to browse the Internet until they have agreed to a terms of services agreement or perhaps paid a fee, such as you find at hotels. It is quite common for these systems to capture the initial URL used to go to the Internet and then pass it as a parameter from page to page until the user is authorized for Internet access. Once the authorization occurs, a 302 message is once again used to redirect the user to the site that he originally requested.
+
+In the first case, a forwarder for resources within our own website, the programmer should take care to decode and validate any URL passed in as a parameter. We want to ensure that the URL that we are about to redirect to is one that we control. This should be relatively easy to do since we know that only a limited number of domain names should ever appear in the redirected URL. It is even possible that the only thing that should appear is the page itself since all of the resources will be found on the web server where the application is running.
+
+In the second case this is much more difficult since we cannot predict where the user will want to go. Some take the approach of sending an HTTP refresh message with a five to ten second timer to the user, explaining that they are about to be redirected away from the site to some third party. This gives the user some time to decide for himself if he wishes the redirect to occur.
+
+Let’s take a look at how someone could exploit this in an actual attack. An attacker determines that our website has a redirect function that does not validate the destination, nor does it warn the user before redirecting. To leverage this, the attacker makes a copy of our logon page and places it on a server that he controls. The attacker also writes a minimal amount of code to accept credentials. Next the attacker crafts a URL that will take the user to our real website, accessing the redirect function. The URL also includes parameters that will leverage this function to forward the user to the fake logon page.
+
+With the URL prepared, the attacker now sends out a phishing email to a large number of potential users of our site. One of those users, seeing an email indicating that there’s an important new update on the site, first verifies that the link actually goes to our site and then clicks the link. Their browser is sent to our site, but then redirected to the false logon page. Assuming that his session has expired, the user now enters his credentials. The fake logon page first harvests the user’s login credentials, then might return a page indicating that our site is temporarily down or perhaps even forward the user back to our site.
+
+Has our web site been compromised? Not directly. However, the attacker can now log in directly using the stolen credentials.
+
+This issue of Unvalidated Redirects and Forwards is sometimes ignored by developers. They reason that the behavior can only be used to redirect a user to a third party, so its not really their application that is being attacked. We realize, however, how serious it would be for someone to abuse our trusted reputation and use our website in such social engineering attacks. We also recognize the potential for this to lead to a compromise our own application, even though it may happen indirectly.
+
+The best protection against unvalidated redirects and forwards is to simply not use or allow them. If you do find that they are necessary in a project that you are working on, consider using some sort of reference or mapping value in the redirect rather than using a raw URL. This mapping value, likely an id for an item in a database, can be used on the server side to determine which URL to redirect the user to. In this way, all of the redirects will be authorized since we are never relying on what the user passes in to generate the redirect message itself.
+
+In conclusion, including code that will redirect a user to an external resource can be abused by attackers and used to harm others. The easiest and most secure solution is to simply avoid having a redirect function within our application. If that is not an option then we must carefully validate where the user could be redirected. One way to do this is to present the potential redirection to the user himself for evaluation. The second and more effective method is to map all authorized redirects within the application itself so that an attacker never has the opportunity to redirect a user to an arbitrary page.
+
 
 
 HOW TO DEAL WITH IT:
