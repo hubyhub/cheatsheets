@@ -6,49 +6,60 @@ var arr = new Array()
 var arr = [1,2,3,4];
 
 ### length
-`arr.length(); 				// liefert length zurück`
-`arr.length = 3; 			// beschneidet array, alles nach 3.pos ist weg.`
+```javascript
+arr.length(); 				// liefert length zurück
+arr.length = 3; 			// beschneidet array, alles nach 3.pos ist weg.
+```
 
 ### push
-`arr.push();				// liefert nur length zurück`
-`arr.push("myString");		// fügt element an letzter Stelle ein und liefert neue length zurück`
-`arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden`
+```javascript
+arr.push();					// liefert nur length zurück
+arr.push("myString");		// fügt element an letzter Stelle ein und liefert neue length zurück
+arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden
+```
+
 
 ### unshift
-`arr.unshift(); 			// liefert nur length zurück`
-`arr.unshift("vorne");		// fügt element an erster Stelle ein und liefert neue length zurück`
-`arr.unshift("s1", "s2");	// mehrere Elemente können gleichzeitig eingefügt werden`
+```javascript
+arr.unshift(); 				// liefert nur length zurück
+arr.unshift("vorne");		// fügt element an erster Stelle ein und liefert neue length zurück
+arr.unshift("s1", "s2");	// mehrere Elemente können gleichzeitig eingefügt werden
 
 ### indexOf
 [3,"3","s1",2, "s1"]
-`arr.indexOf("s1");			// liefert index des ERSTEN Vorkommnis von "s1"`
-`arr.lastIndexOf("s1");		// liefert index des letzten Vorkommnis von "s1"`
-`arr.indexOf("s1", 3);		// der zweite Parameter bestimmt den ANFANGS-index ab dem die Suche beginnen soll.`
+```javascript
+arr.indexOf("s1");			// liefert index des ERSTEN Vorkommnis von "s1"
+arr.lastIndexOf("s1");		// liefert index des letzten Vorkommnis von "s1"
+arr.indexOf("s1", 3);		// der zweite Parameter bestimmt den ANFANGS-index ab dem die Suche beginnen soll.
+arr.indexOf("3");			// ACHTUNG: zwischen 3 und "3" wird unterschieden
+```
 
-`arr.indexOf("3");			// ACHTUNG: zwischen 3 und "3" wird unterschieden`
-
-
-`[{a:1},{b:2}].indexOf({b:2})	// ACHTUNG: sind 2 unterschiedliche Objekte, wird hier nicht gefunden `
-`var myObj = {a:1};`
-`var yourObj = {b:2};`
-`var arr2 = [myObj,yourObj];`
-`arr2.indexOf(yourObj);			// Wird gefunden! (1)`
-
+```javascript
+[{a:1},{b:2}].indexOf({b:2})	// ACHTUNG: sind 2 unterschiedliche Objekte, wird hier nicht gefunden 
+var myObj = {a:1};
+var yourObj = {b:2};
+var arr2 = [myObj,yourObj];
+arr2.indexOf(yourObj);			// Wird gefunden! (1)
+```
 indexOf ist type und instanz-sensitiv
 
 ### slice
-`arr.slice();	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. `
-`arr.slice(0);	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. `
-`arr.slice(3);	// liefert array ab index 3 zurück. Array "arr" bleibt unverändert. `
-`arr.slice(3,4);	// liefert array zwischen index 3 und 4 zurück. Array "arr" bleibt unverändert. `
+```javascript
+arr.slice();	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
+arr.slice(0);	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
+arr.slice(3);	// liefert array ab index 3 zurück. Array "arr" bleibt unverändert.
+arr.slice(3,4);	// liefert array zwischen index 3 und 4 zurück. Array "arr" bleibt unverändert. 
+```
 
 ### splice
-`arr.splice(0);	  // trennt das Array wirklich ab, ab index 0! Array hat dann keine Elemente mehr.`
-`arr.splice(3);	  // löscht Elemente vom array ab index 3 und liefert Array von gelöschten Elementen`
-`arr.splice(2,3);  // löscht ab index 2, die nächsten 3 elemente, und liefert Array von gelöschten Elementen zurück.`
-`arr.splice(2,3, "newEl1", "newEl2");  // löscht Elemente, und fügt an der Stelle die neuen Elemente ein.`
+```javascript
+arr.splice(0);	  // trennt das Array wirklich ab, ab index 0! Array hat dann keine Elemente mehr.
+arr.splice(3);	  // löscht Elemente vom array ab index 3 und liefert Array von gelöschten Elementen
+arr.splice(2,3);  // löscht ab index 2, die nächsten 3 elemente, und liefert Array von gelöschten Elementen zurück.
+arr.splice(2,3, "newEl1", "newEl2");  // löscht Elemente, und fügt an der Stelle die neuen Elemente ein.
 
-`delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bleibt unverändert.`
+delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bleibt unverändert.
+```
 
 
 ### forEach
