@@ -1,9 +1,11 @@
 # Arrays in Javascript
 
+### Erstellen
+```javascript
 var arr = []  			// empfohlen
-var arr = new Array()
-
 var arr = [1,2,3,4];
+var arr = new Array();	
+```
 
 ### length
 ```javascript
