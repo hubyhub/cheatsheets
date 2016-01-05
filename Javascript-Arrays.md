@@ -24,6 +24,7 @@ arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden
 arr.unshift(); 				// liefert nur length zurück
 arr.unshift("vorne");		// fügt element an erster Stelle ein und liefert neue length zurück
 arr.unshift("s1", "s2");	// mehrere Elemente können gleichzeitig eingefügt werden
+```
 
 ### indexOf
 [3,"3","s1",2, "s1"]
@@ -88,10 +89,10 @@ Liefert neues Array zurück
 [10,20,30,40].map( function(el, index, arr){
 	return el>20;		// [30,40] 
 })						
-```
-`["Happy", 0, "New", "", "Year", false].filter(Boolean);`
-`["Happy", "New", "Year"] 			// liefert nur die truthy Werte zurück`
 
+["Happy", 0, "New", "", "Year", false].filter(Boolean);
+["Happy", "New", "Year"] 			// liefert nur die truthy Werte zurück
+```
 
 
 ### some
