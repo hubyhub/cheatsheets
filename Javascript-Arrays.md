@@ -1,3 +1,5 @@
+# Arrays in Javascript
+
 var arr = []  			// empfohlen
 var arr = new Array()
 
@@ -34,13 +36,13 @@ arr2.indexOf(yourObj);			// Wird gefunden! (1)
 
 indexOf ist type und instanz-sensitiv
 
-**slice**
+### slice
 arr.slice();	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
 arr.slice(0);	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
 arr.slice(3);	// liefert array ab index 3 zurück. Array "arr" bleibt unverändert. 
 arr.slice(3,4);	// liefert array zwischen index 3 und 4 zurück. Array "arr" bleibt unverändert. 
 
-**splice**
+### splice
 arr.splice(0);	  // trennt das Array wirklich ab, ab index 0! Array hat dann keine Elemente mehr.
 arr.splice(3);	  // löscht Elemente vom array ab index 3 und liefert Array von gelöschten Elementen
 arr.splice(2,3);  // löscht ab index 2, die nächsten 3 elemente, und liefert Array von gelöschten Elementen zurück.
@@ -49,7 +51,7 @@ arr.splice(2,3, "newEl1", "newEl2");  // löscht Elemente, und fügt an der Stelle
 delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bleibt unverändert.
 
 
-**forEach**
+### forEach
 [1,2,3,4].forEach( callbackFunction, this )
 [10,20,30,40].forEach( function(el, index, arr){
 	console.log(el);	//liefert Elemente (10,20,30,40)
@@ -57,14 +59,14 @@ delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays ble
 	console.log(arr);	// liefert 4x [10,20,30,40]
 })
 
-**map**
+### map
 Ändert die Werte der Elemente des Arrays
 und liefert neues Array zurück
 [10,20,30,40].map( function(el, index, arr){
 	return el*el;		// liefert [100, 400, 900, 1600]
 })
 
-**filter**
+### filter
 filtert bestimmte Elemente aus dem Array heraus.
 Liefert neues Array zurück
 [10,20,30,40].map( function(el, index, arr){
@@ -76,7 +78,7 @@ Liefert neues Array zurück
 
 
 
-**some**
+### some
 Liefert true oder false zurück abhängig davon  
 ob zumindest 1 Element im Array die Bedingung erfüllt
 
@@ -88,7 +90,7 @@ ob zumindest 1 Element im Array die Bedingung erfüllt
 	return el>200;		//false
 })
 
-**every**
+### every
 Liefert true oder false zurück je nachdem ob
 *ALLE* Elemente im Array die Bedingung erfüllen
 
@@ -100,7 +102,7 @@ Liefert true oder false zurück je nachdem ob
 	return el>2;		//true
 })
 
-**reduce**
+### reduce
 [10,20,30,40].reduce( function(sum, el, index, arr){
 	return sum+el;		// 15
 });
@@ -115,7 +117,7 @@ Liefert true oder false zurück je nachdem ob
 // 3
 
 
-** Array überprüfen**
+###  Array überprüfen
 ACHTUNG: 
 Array instanceof Object  // Array ist Instanz von Object 
 true
@@ -131,7 +133,7 @@ Array.isArray({});		// false
 Array.isArray([]);		// true
 
 
-**Argumente von Funktionen**
+### Argumente von Funktionen
 function foo(){
  console.log(arguments, 'len', arguments.length, '2nd', arguments[1]); 
 }
