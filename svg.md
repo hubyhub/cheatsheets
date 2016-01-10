@@ -1,14 +1,58 @@
-### SVG mit Javascript
+# SVG 
+
+### Elemente
+```xml
+
+<line x1="0" y1="0" x2="100" y2="0" style="stroke: black;"/>
+
+<rect x="70" y="30" width="20" height="20" style="fill: gray;"/>
+
+<circle cx="50" cy="50" r="3" style="fill: black;"/>
+
+<ellipse cx="30" cy="80" rx="10" ry="20" style="stroke: black; fill: none;"/>
+
+<polygon points="40 40, 100 40, 70 70, 40 70" style="fill: gray; stroke: black;"/>
+
+<polyline points="100 0, 0 0, 0 100" style="stroke: black; fill: none;"/>
 
 
-### Attributes
+
+<g id="arrow"">
+    <line x1="60" y1="50" x2="90" y2="50"/>
+    <polygon points="90 50, 85 45, 85 55"/>
+</g>
+<use xlink:href="#arrow" transform="rotate(60, 50, 50)"/>
+
+```
+
+### Auswahl einiger Attribute
+
+```
+stroke  Die stroke-Farbe. default none
+
+stroke-width
+
+stroke-opacity  0.0 - 1.0;
+
+stroke-dasharray="15, 10, 5, 10"    Strichmuster: "5, 5" 
+
+stroke-linecap  Form der Linien-enden "butt" (default), "round", or "square".
+
+stroke-linejoin         Form der Ecken eines Polygons "miter", "round", or "bevel" (flat).
+stroke-miterlimit       Default Wert is 4.
+```
+
+
+
+
+### Attribute setzen, löschen und ändern
 ```javascript
     element.getAttribute(attributeName)
     element.setAttribute(name, newValue)
     element.removeAttribute(name)
 ```
 
-### CSS
+### CSS setzen 
 ```javascript
     element.setAttribute("style", newStyleValue)    // overwrites all styles on the element
     element.style.getPropertyValue(propertyName)
@@ -27,9 +71,9 @@
     element.textContent   // gets and write text. overwrites child-nodes   
 ```
 
-### Element erzeugen
+### Elemente erzeugen
 ```javascript
-    1. // document er 
+    1. // document erhalten 
     var obj = document.getElementById("mySVG");
     var svgDoc = obj.getSVGDocument();    
     
@@ -40,7 +84,7 @@
     parentElement.appendChild(circle);
        
    
-    var svgns = clock.namespaceURI, 
+    var svgns = obj.namespaceURI, 
     // Weitere Elemente
     doc.createElementNS(svgns, "circle");
     doc.createElementNS(svgns, "g") );
@@ -52,7 +96,19 @@
 ```
 
 `var svgns = document.getElementById("mySVG").namespaceURI;`
+### Transformationen
+´´´html
+    <g id="square">
+        <rect x="0" y="0" width="20" height="20" />
+    </g>
+    <use xlink:href="#square" transform="translate(50,50)"/>
+    <use xlink:href="#square" transform="scale(2)"/>
     
+    <rect x="10" y="10" height="15" width="20" transform="translate(30, 20) scale(2)" /> // combination
+    
+´´´    
+
+
 
 
 ## Basic Interactivity
@@ -111,15 +167,16 @@ In einer init() function fügt man event listener hinzu:
 
 
 
-### get target from event like a click
+### Get Target und Eltern NOde
 
 ```javascript
-   function clickButton(evt) {
-          var choice = evt.target.parentNode;
+   function clickBtn(evt) {
+          var el = evt.target;
+          var parentEl = evt.target.parentNode;
    }
 ```
 
-### Scaling object and keeping its stroke-width
+### Objekt aufskalieren, aber linien-dicke beibehalten:
 ```javascript   
   
   var scaleFactor = [1.25, 1.5, 1.75];
