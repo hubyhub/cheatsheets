@@ -97,7 +97,7 @@ stroke-miterlimit       Default Wert is 4.
 
 `var svgns = document.getElementById("mySVG").namespaceURI;`
 ### Transformationen
-´´´html
+´´´
     <g id="square">
         <rect x="0" y="0" width="20" height="20" />
     </g>
@@ -190,8 +190,10 @@ In einer init() function fügt man event listener hinzu:
 ```
 
   
---> D3.js
---> Raphaël
---> Snap.svg
-jQuery ist nicht geeignet:
+### Libraries  
+* D3.js<br>
+* Raphaël
+* Snap.svg
+
+jQuery ist nicht geeignet:<br>
 "if you ask JQuery to make you a circle, it will return an HTMLUnknownElement object"
