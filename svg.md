@@ -97,7 +97,8 @@ stroke-miterlimit       Default Wert is 4.
 
 `var svgns = document.getElementById("mySVG").namespaceURI;`
 ### Transformationen
-´´´
+```html
+
     <g id="square">
         <rect x="0" y="0" width="20" height="20" />
     </g>
@@ -106,8 +107,7 @@ stroke-miterlimit       Default Wert is 4.
     
     <rect x="10" y="10" height="15" width="20" transform="translate(30, 20) scale(2)" /> // combination
     
-´´´    
-
+```
 
 
 
@@ -153,11 +153,11 @@ stroke-miterlimit       Default Wert is 4.
 Um das zu lösen macht man ein unsichtbares **rect** das den kompletten viewport covert und auf das "**mouseup** event hört.
  Es muß das erste und daher das unterste object in der Graphic und zusätzlich noch:
  
- ```html
+```html 
 
-    <rect id="eventCatcher" x="0" y="0" width="400" height="300"
-      style="fill: none;" pointer-events="visible" /> 
- ```
+<rect id="eventCatcher" x="0" y="0" width="400" height="300"  style="fill: none;" pointer-events="visible" />
+
+```
 
 `fill: none;` macht es unsichtbar
 `pointer-events:visible`  um auf sichtbare Elemente zu reagieren, unabhängig von ihrer opacity
