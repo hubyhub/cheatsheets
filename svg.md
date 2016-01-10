@@ -51,7 +51,7 @@ var svgArray = document.getElementsByTagName(name);     // array
 
 var myRects = svg.querySelectorAll(".myRects");        // array
 var rects   = svg.querySelectorAll("rect");            // array    
-var myRect  = svg.querySelectorAll("#myRect")[0];      // array !
+var myRect  = svg.querySelectorAll("#myRect")[0];      // array !!!!
 
 z.B.:
 function clickButton(evt) {
