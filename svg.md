@@ -43,6 +43,30 @@ stroke-miterlimit       Default Wert is 4.
 ```
 
 
+### Elemente bekommen
+```javascript
+
+var svgElement = document.getElementById(idString);     // element
+var svgArray = document.getElementsByTagName(name);     // array
+
+var myRects = svg.querySelectorAll(".myRects");        // array
+var rects   = svg.querySelectorAll("rect");            // array    
+var myRect  = svg.querySelectorAll("#myRect")[0];      // array !
+
+z.B.:
+function clickButton(evt) {
+      var choice = evt.target.parentNode;
+}
+
+Mehrere Elemente ändern:
+for (var i = 0; i < 3; i++) {
+        obj = document.getElementById("myEl" + i);
+        obj.addEventListener("click", clickButton, false);
+}
+
+```
+
+
 
 
 ### Attribute setzen, löschen und ändern
