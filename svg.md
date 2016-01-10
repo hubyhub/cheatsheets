@@ -53,6 +53,9 @@ var myRects = svg.querySelectorAll(".myRects");        // array
 var rects   = svg.querySelectorAll("rect");            // array    
 var myRect  = svg.querySelectorAll("#myRect")[0];      // array !!!!
 
+
+element.tagName     // get Tagname of element. z.B: polygon, rect, div,...
+
 z.B.:
 function clickButton(evt) {
       var choice = evt.target.parentNode;
@@ -74,6 +77,14 @@ for (var i = 0; i < 3; i++) {
     element.getAttribute("class")
     element.setAttribute("class", "hey")
     element.removeAttribute("class")
+    
+    // Bei Polygonen/Polyline:
+    
+    element.points                  //  SVGPointList {0: SVGPoint, 1: SVGPoint, 2: SVGPoint, 3: SVGPoint}
+    element.points[0].x = 333;
+    element.points.replaceItem(new_vertex,i); 
+    element.getBBox();              // gets Bounding box    
+    
 ```
 
 ### CSS setzen 
