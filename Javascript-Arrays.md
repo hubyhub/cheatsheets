@@ -9,23 +9,23 @@ var arr = new Array();
 
 ### length
 ```javascript
-arr.length(); 				// liefert length zurück
+arr.length(); 				// liefert length zurÃ¼ck
 arr.length = 3; 			// beschneidet array, alles nach 3.pos ist weg.
 ```
 
 ### push
 ```javascript
-arr.push();					// liefert nur length zurück
-arr.push("myString");		// fügt element an letzter Stelle ein und liefert neue length zurück
-arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden
+arr.push();					// liefert nur length zurÃ¼ck
+arr.push("myString");		// fÃ¼gt element an letzter Stelle ein und liefert neue length zurÃ¼ck
+arr.push("s1", "s2");		// mehrere Elemente kÃ¶nnen gleichzeitig eingefÃ¼gt werden
 ```
 
 
 ### unshift
 ```javascript
-arr.unshift(); 				// liefert nur length zurück
-arr.unshift("vorne");		// fügt element an erster Stelle ein und liefert neue length zurück
-arr.unshift("s1", "s2");	// mehrere Elemente können gleichzeitig eingefügt werden
+arr.unshift(); 				// liefert nur length zurÃ¼ck
+arr.unshift("vorne");		// fÃ¼gt element an erster Stelle ein und liefert neue length zurÃ¼ck
+arr.unshift("s1", "s2");	// mehrere Elemente kÃ¶nnen gleichzeitig eingefÃ¼gt werden
 ```
 
 ### indexOf
@@ -46,22 +46,30 @@ arr2.indexOf(yourObj);			// Wird gefunden! (1)
 ```
 indexOf ist type und instanz-sensitiv
 
+### split
+```javascript
+ "13 13, 12 32, 23".split(", ");        // ["13 13", "12 32", "23 3"]
+
+// konvertiert String in Array
+
+```
+
 ### slice
 ```javascript
-arr.slice();	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
-arr.slice(0);	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
-arr.slice(3);	// liefert array ab index 3 zurück. Array "arr" bleibt unverändert.
-arr.slice(3,4);	// liefert array zwischen index 3 und 4 zurück. Array "arr" bleibt unverändert. 
+arr.slice();	// liefert gesamtes Array zurÃ¼ck. Array "arr" bleibt unverÃ¤ndert. 
+arr.slice(0);	// liefert gesamtes Array zurÃ¼ck. Array "arr" bleibt unverÃ¤ndert. 
+arr.slice(3);	// liefert array ab index 3 zurÃ¼ck. Array "arr" bleibt unverÃ¤ndert.
+arr.slice(3,4);	// liefert array zwischen index 3 und 4 zurÃ¼ck. Array "arr" bleibt unverÃ¤ndert. 
 ```
 
 ### splice
 ```javascript
 arr.splice(0);	  // trennt das Array wirklich ab, ab index 0! Array hat dann keine Elemente mehr.
-arr.splice(3);	  // löscht Elemente vom array ab index 3 und liefert Array von gelöschten Elementen
-arr.splice(2,3);  // löscht ab index 2, die nächsten 3 elemente, und liefert Array von gelöschten Elementen zurück.
-arr.splice(2,3, "newEl1", "newEl2");  // löscht Elemente, und fügt an der Stelle die neuen Elemente ein.
+arr.splice(3);	  // lÃ¶scht Elemente vom array ab index 3 und liefert Array von gelÃ¶schten Elementen
+arr.splice(2,3);  // lÃ¶scht ab index 2, die nÃ¤chsten 3 elemente, und liefert Array von gelÃ¶schten Elementen zurÃ¼ck.
+arr.splice(2,3, "newEl1", "newEl2");  // lÃ¶scht Elemente, und fÃ¼gt an der Stelle die neuen Elemente ein.
 
-delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bleibt unverändert.
+delete arr[3]	// Ã¤ndert Element an Index 3 zu "undefined". Length des Arrays bleibt unverÃ¤ndert.
 ```
 
 
@@ -76,8 +84,8 @@ delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays ble
 ```
 
 ### map
-Ändert die Werte der Elemente des Arrays
-und liefert neues Array zurück
+Ã¤ndert die Werte der Elemente des Arrays
+und liefert neues Array zurÃ¼ck
 ```javascript
 [10,20,30,40].map( function(el, index, arr){
 	return el*el;		// liefert [100, 400, 900, 1600]
@@ -86,20 +94,20 @@ und liefert neues Array zurück
 
 ### filter
 filtert bestimmte Elemente aus dem Array heraus.
-Liefert neues Array zurück
+Liefert neues Array zurÃ¼ck
 ```javascript
 [10,20,30,40].map( function(el, index, arr){
 	return el>20;		// [30,40] 
 })						
 
 ["Happy", 0, "New", "", "Year", false].filter(Boolean);
-["Happy", "New", "Year"] 			// liefert nur die truthy Werte zurück
+["Happy", "New", "Year"] 			// liefert nur die truthy Werte zurÃ¼ck
 ```
 
 
 ### some
-Liefert true oder false zurück abhängig davon  
-ob zumindest 1 Element im Array die Bedingung erfüllt
+Liefert true oder false zurÃ¼ck abhÃ¤ngig davon  
+ob zumindest 1 Element im Array die Bedingung erfÃ¼llt
 
 ```javascript
 [10,20,30,40].some( function(el, index, arr){
@@ -112,8 +120,8 @@ ob zumindest 1 Element im Array die Bedingung erfüllt
 ```
 
 ### every
-Liefert true oder false zurück je nachdem ob
-*ALLE* Elemente im Array die Bedingung erfüllen
+Liefert true oder false zurÃ¼ck je nachdem ob
+*ALLE* Elemente im Array die Bedingung erfÃ¼llen
 
 ```javascript
 [10,20,30,40].some( function(el, index, arr){
@@ -133,7 +141,7 @@ Liefert true oder false zurück je nachdem ob
 });
 
 [10,20,30,40].reduce( function(sum, el, index, arr){
-	return sum+el;		// 100+15, liefert 115 zurück
+	return sum+el;		// 100+15, liefert 115 zurÃ¼ck
 }, 100);
 
 ["hello ", , ,,,,false,,"javascript"].reduce(function(len,el){
@@ -143,7 +151,7 @@ Liefert true oder false zurück je nachdem ob
 ```
 
 
-###  Array überprüfen
+###  Array Ã¼berprÃ¼fen
 ACHTUNG: 
 ```javascript
 Array instanceof Object  // Array ist Instanz von Object 
@@ -155,7 +163,7 @@ typeof []				// type von Array ist Object
 typeof {} 				// object ist auch "object"
 "object"
 			
-Darum so überprüfen:
+Darum so Ã¼berprÃ¼fen:
 Array.isArray({});		// false		
 Array.isArray([]);		// true
 ```
@@ -169,7 +177,7 @@ foo(1,3,4,5); 			//[1, 3, 4, 5] "len" 4 "2nd" 3
 
 
 function foo(){
- var args = Array.prototype.slice.call(arguments); // array-like object in Array ändern
+ var args = Array.prototype.slice.call(arguments); // array-like object in Array Ã¤ndern
  args.push(5);
  console.log(args, 'len', args.length, '2nd', args[1]);
 }
