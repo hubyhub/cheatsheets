@@ -13,11 +13,16 @@ arr.length(); 				// liefert length zurück
 arr.length = 3; 			// beschneidet array, alles nach 3.pos ist weg.
 ```
 
-### push
+### push 
 ```javascript
-arr.push();					// liefert nur length zurück
 arr.push("myString");		// fügt element an letzter Stelle ein und liefert neue length zurück
 arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden
+arr.push();			// liefert nur length zurück
+```
+
+### pop 
+```javascript
+arr.pop();			// entfernt das letzte Element und liefert es zurück
 ```
 
 
