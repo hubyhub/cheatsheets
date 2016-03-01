@@ -5,6 +5,8 @@
 var arr = []  			// empfohlen
 var arr = [1,2,3,4];
 var arr = new Array();	
+
+arr[1] 			// gibt "2" zurück
 ```
 
 ### length
@@ -15,22 +17,26 @@ arr.length = 3; 			// beschneidet array, alles nach 3.pos ist weg.
 
 ### push 
 ```javascript
-arr.push("myString");		// fügt element an letzter Stelle ein und liefert neue length zurück
+arr.push("myString");		// fügt element an LETZTER Stelle ein und liefert neue length zurück
 arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden
 arr.push();			// liefert nur length zurück
 ```
 
 ### pop 
 ```javascript
-arr.pop();			// entfernt das letzte Element und liefert es zurück
+arr.pop();			// ENTFERNT das LETZTE Element und liefert es zurück
 ```
-
 
 ### unshift
 ```javascript
-arr.unshift(); 				// liefert nur length zurück
-arr.unshift("vorne");		// fügt element an erster Stelle ein und liefert neue length zurück
+arr.unshift("vorne");		// fügt Element an ERSTER Stelle ein und liefert neue length zurück
 arr.unshift("s1", "s2");	// mehrere Elemente können gleichzeitig eingefügt werden
+arr.unshift(); 			// liefert nur length zurück
+```
+
+### shift
+```javascript
+arr.shift(); 			// ENTFERNT ERSTES Element
 ```
 
 ### indexOf
