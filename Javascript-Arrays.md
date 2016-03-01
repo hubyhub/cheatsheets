@@ -124,11 +124,11 @@ Liefert true oder false zurück je nachdem ob
 *ALLE* Elemente im Array die Bedingung erfüllen
 
 ```javascript
-[10,20,30,40].some( function(el, index, arr){
+[10,20,30,40].every( function(el, index, arr){
 	return el>20;		//false
 })
 
-[10,20,30,40].some( function(el, index, arr){
+[10,20,30,40].every( function(el, index, arr){
 	return el>2;		//true
 })
 ```
