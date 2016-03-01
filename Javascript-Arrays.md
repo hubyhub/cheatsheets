@@ -4,8 +4,7 @@
 ```javascript
 var arr = []  			// empfohlen
 var arr = [1,2,3,4];
-var arr = new Array();	
-
+var arr = new Array();
 arr[1] 			// gibt "2" zurück
 ```
 
