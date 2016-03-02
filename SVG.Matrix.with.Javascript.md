@@ -107,8 +107,8 @@ globalPoint = pt.matrixTransform(svg.getScreenCTM().inverse());
 
 ```
 
-### SVGTransform (transform="translate(1, 1) scale(2)")
-Create, change and get transform-items of an element
+### SVGTransform 
+Create, change and get transform-items of an element (transform="translate(1, 1) scale(2)")
 
 ```javascript
 var transform;
