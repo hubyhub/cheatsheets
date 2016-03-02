@@ -34,8 +34,8 @@ m9 = identityMatrix.flipY();
 m10 = identityMatrix.inverse();
 
 // or directly:
-m10.a = 1.234;
-m10.f = 1;
+m1.e = 42;
+m1.f = 333;
 
 // Rotate around a point (read from right to left)
 matrix = identityMatrix.translate(30, 50).rotate(90).translate(-30,-50);
