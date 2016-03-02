@@ -76,14 +76,15 @@ polygon.getCTM();
 
 ```
 
-### Diverse
+### getScreenCTM
 ```javascript
+var m, x, y; 
 
 //Gets the transformation matrix from the current user units to the screen coordinate system.
-svg.getScreenCTM(); 	
+m = svg.getScreenCTM(); 	
 
-svg.getScreenCTM().e	// get x-pos of svg-element in current browser 	
-svg.getScreenCTM().f 	// get y-pos of svg-element in current browser
+x = svg.getScreenCTM().e	// get x-pos of svg-element in current browser 	
+y = svg.getScreenCTM().f 	// get y-pos of svg-element in current browser
 // paddings and margins of body and svg element are considered
 
 ```
