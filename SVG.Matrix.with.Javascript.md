@@ -2,7 +2,7 @@
 
 ### HTML
 ```html
-<svg id="the-svg">
+<svg id="svg">
     <polygon id="polygon1" points="0 0 0 100 100 100 100 0"></polygon>
 </svg>
 ```
@@ -10,7 +10,7 @@
 ### Get the Elements
 ```javascript
 var svg, polygon;
-svg = document.getElementById("the-svg");
+svg = document.getElementById("svg");
 polygon = document.getElementById("polygon1");
 
 ```
