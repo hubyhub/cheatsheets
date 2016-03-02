@@ -35,7 +35,7 @@ arr.unshift(); 			// liefert nur length zurück
 
 ### shift
 ```javascript
-arr.shift(); 			// ENTFERNT ERSTES Element
+arr.shift(); 			// ENTFERNT ERSTES Element und liefert es zurück
 ```
 
 ### indexOf
