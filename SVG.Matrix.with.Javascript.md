@@ -68,6 +68,7 @@ var transform;
 transform = polygon.transform.baseVal.createSVGTransformFromMatrix(identityMatrix);
 // or 
 transform = svg.createSVGTransform();
+transform = svg.createSVGTransformFromMatrix(identityMatrix);
 
 // 2. append transform on polygon (transform="matrix(1 0 0 1 0 0)")
 polygon.transform.baseVal.appendItem(transform);
