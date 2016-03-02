@@ -53,8 +53,9 @@ var myObj = {a:1};
 var yourObj = {b:2};
 var arr2 = [myObj,yourObj];
 arr2.indexOf(yourObj);			// Wird gefunden! (1)
+// indexOf ist type und instanz-sensitiv
 ```
-indexOf ist type und instanz-sensitiv
+
 
 ### String.split
 ```javascript
