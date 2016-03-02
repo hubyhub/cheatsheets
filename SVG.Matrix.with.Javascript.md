@@ -62,8 +62,12 @@ point = point.matrixTransform(matrix); // apply matrix on that point
 ### Apply Matrix on Elements (g, rect, circle, polygon,...)
 
 ```javascript
+var transform; 
+
 // 1. create a SVGTransform
-var transform = polygon.transform.baseVal.createSVGTransformFromMatrix(identityMatrix);
+transform = polygon.transform.baseVal.createSVGTransformFromMatrix(identityMatrix);
+// or 
+transform = svg.createSVGTransform();
 
 // 2. append transform on polygon (transform="matrix(1 0 0 1 0 0)")
 polygon.transform.baseVal.appendItem(transform);
@@ -111,17 +115,18 @@ var transform;
 
 // create a transform from a matrix
 transform = polygon.transform.baseVal.createSVGTransformFromMatrix(identityMatrix);
+// or 
+transform = svg.createSVGTransform();
 transform.setRotate(33, 100, 100);
 
+// removes all items from baseVal, Matrix is still applied?
+polygon.transform.baseVal.clear();			
 // append a transform
-polygon.transform.baseVal.appendItem(transform);
+polygon.transform.baseVal.appendItem(transform);	
 
 // Get the first SVGTransform
 transform = polygon.transform.baseVal.getItem(0);
-
 polygon.transform.baseVal.getItem(0).setTranslate(0,36);
-
-polygon.transform.baseVal.clear();			// removes all items from baseVal, Matrix is still applied?
 
 // Merge several transforms to one single Matrix
 polygon.transform.baseVal.consolidate();	
