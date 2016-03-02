@@ -56,7 +56,7 @@ arr2.indexOf(yourObj);			// Wird gefunden! (1)
 ```
 indexOf ist type und instanz-sensitiv
 
-### split
+### String.split
 ```javascript
  "13 13, 12 32, 23".split(", ");        // ["13 13", "12 32", "23 3"]
 
