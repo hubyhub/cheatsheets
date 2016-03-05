@@ -1,8 +1,8 @@
 #Prototypal Javascript
 
-### Generate a Prototype with a Object Literal.
+## GENERATING OBJECTS 
+
 This is the "class" or better lets say the **prototype**.
- 
 ```javascript
 var Person = {
 	name : "",	
@@ -42,5 +42,7 @@ var p3 =  Object.create(Person, {
 });
 ```
 
+## INHERITANCE 
+(CHAINING PROTOTYPES)
 
 
