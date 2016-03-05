@@ -28,7 +28,7 @@ var p2 = Object.create(Person, {
 });
 ```
 
-### Instantiate a new Object and add new properties
+### Yet another instance with new properties
 ```javascript
 // adding a new property "age" and a new method "greet"
 var p3 =  Object.create(Person, {
@@ -43,6 +43,41 @@ var p3 =  Object.create(Person, {
 ```
 
 ## INHERITANCE 
-(CHAINING PROTOTYPES)
+(By CHAINING PROTOTYPES)
+```javascript
+
+var Person = {
+	name : "",	
+	sayName : function(){
+		console.log("my name is "+ this.name);
+	},	
+};
+
+var Teacher = Object.create(Person, {
+ subject : {value :""},
+ teach : {
+	value : function (){
+		console.log("Hey! I am teaching "+ this.subject);
+	}
+ }
+});
+
+var teacher1 = Object.create(Teacher,  {name : {value : "John Kimble"}, subject : {value : "Math"} } );
+var teacher2 = Object.create(Teacher,  {name : {value : "John Keating"}, subject : {value : "English"}}  );
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
