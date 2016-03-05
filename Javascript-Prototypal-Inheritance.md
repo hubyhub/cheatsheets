@@ -28,7 +28,7 @@ var p2 = Object.create(Person, {
 });
 ```
 
-### Instantiate a new Object and ** add new properties**
+### Instantiate a new Object and add new properties
 ```javascript
 // adding a new property "age" and a new method "greet"
 var p3 =  Object.create(Person, {
