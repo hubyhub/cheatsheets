@@ -1,5 +1,4 @@
 #Prototypal Javascript
-## Generating Objects with Object create
 
 ### Generate a Prototype with a Object Literal.
 This is the "class" or better lets say the **prototype**.
@@ -15,13 +14,13 @@ var Person = {
 
 
 
-### Instantiate a new Object and set its property
+### Make new instance of Person and set its property
 ```javascript
 var p1 = Object.create(Person);
-simplePerson.name = "John";
+p1.name = "John";
 ```
 
-### Instantiate a new Object and set its property (another way)
+### Another instance and set its property (another way)
 ```javascript
 // second parameter is called "object descriptors"
 var p2 = Object.create(Person, {
