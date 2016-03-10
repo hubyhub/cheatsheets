@@ -114,24 +114,29 @@ Create, change and get transform-items of an element (transform="translate(1, 1)
 ```javascript
 var transform;
 
-// create a transform from a matrix
-transform = polygon.transform.baseVal.createSVGTransformFromMatrix(identityMatrix);
-// or 
+// Identity Matrix
 transform = svg.createSVGTransform();
+// create a transform from a matrix
+transform = polygon.transform.baseVal.createSVGTransformFromMatrix(myMatrix);
 transform.setRotate(33, 100, 100);
 
-// removes all items from baseVal, Matrix is still applied?
-polygon.transform.baseVal.clear();			
-// append a transform
-polygon.transform.baseVal.appendItem(transform);	
+// set a transform
+polygon.transform.baseVal.appendItem(transform); // append a transform
+polygon.transform.baseVal.initialize(transform); // or initialize a transform
 
-// Get the first SVGTransform
+// Get a transform
 transform = polygon.transform.baseVal.getItem(0);
 polygon.transform.baseVal.getItem(0).setTranslate(0,36);
+// or simply:
+transform.setTranslate(0,36);
 
 // Merge several transforms to one single Matrix
 polygon.transform.baseVal.consolidate();	
 //<g transform="scale(1, 1) rotate(-30 10 25)"> --> <g transform="matrix(?,?,?,?,?,?)">
+
+// removes all items from baseVal, 
+polygon.transform.baseVal.clear();			
+
 
 ```
 
