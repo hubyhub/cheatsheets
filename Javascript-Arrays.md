@@ -83,6 +83,15 @@ arr.splice(2,3, "newEl1", "newEl2");  // löscht Elemente, und fügt an der Stel
 delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bleibt unverändert.
 ```
 
+### concat  (verschmilzt beide Arrays)
+```javascript
+var arr1, arr2, arr3;
+arr1 = ["Apfel","Banane"];
+arr2 = ["Melone", "Pfirsich"];
+arr3 = arr1.concat(arr2); 		// ["Apfel","Banane","Melone", "Pfirsich"]
+```
+
+
 
 ### forEach
 ```javascript```
