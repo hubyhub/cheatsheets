@@ -91,7 +91,12 @@ arr2 = ["Melone", "Pfirsich"];
 arr3 = arr1.concat(arr2); 		// ["Apfel","Banane","Melone", "Pfirsich"]
 ```
 
-
+### join (macht string aus dem array)
+```javascript
+var fruits,myString;
+fruits = ["Apfel","Banane","Melone", "Pfirsich"];
+myString = fruits.join();		// "Apfel,Banane,Melone,Pfirsich"
+```
 
 ### forEach
 ```javascript```
