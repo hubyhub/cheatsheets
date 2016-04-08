@@ -112,7 +112,8 @@ myString = fruits.join();		// "Apfel,Banane,Melone,Pfirsich"
 ändert die Werte der Elemente des Arrays
 und liefert neues Array zurück
 ```javascript
-[10,20,30,40].map( function(el, index, arr){
+var newArr;
+newArr = [10,20,30,40].map( function(el, index, arr){
 	return el*el;		// liefert [100, 400, 900, 1600]
 })
 ```
@@ -196,6 +197,11 @@ Array.isArray({});		// false
 Array.isArray([]);		// true
 ```
 
+### Array-like in Array ändern
+```javascript
+var arr1 = Array.prototype.slice.call(arguments); // array-like object in Array ändern, oder...
+var arr2 = Array.from(polygon.points); 
+```	
 ### Argumente von Funktionen
 ```javascript
 function foo(){
