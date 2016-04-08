@@ -145,20 +145,23 @@ Liefert true oder false zurück je nachdem ob
 ```
 
 ### reduce
+Akkumuliert die Werte des Arrays zurückgeliefert wird eine Zahl.
+The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
 ```javascript
 [10,20,30,40].reduce( function(sum, el, index, arr){
-	return sum+el;		// 15
+	return sum+el;		// 100
 });
 
 [10,20,30,40].reduce( function(sum, el, index, arr){
-	return sum+el;		// 100+15, liefert 115 zurück
+	return sum+el;		// 100+10+20+30+40 = 200
 }, 100);
 
+
 ["hello ", , ,,,,false,,"javascript"].reduce(function(len,el){
-	return len+1;
+	return len+1; 	// 3
 },0);
-// 3
+
 ```
 
 
