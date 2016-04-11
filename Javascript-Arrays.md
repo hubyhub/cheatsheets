@@ -108,6 +108,24 @@ myString = fruits.join();		// "Apfel,Banane,Melone,Pfirsich"
 });
 ```
 
+### sort
+```javascript```
+var ascending, descending, fruits;
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();		// default ist aufsteigend. (string oder zahl) ["Apple", "Banana", "Mango", "Orange"]
+fruits.reverse();	// ["Orange", "Mango", "Banana", "Apple"]
+
+// eigene compareFunction:
+ascending = [99,1,3,5,6,8,9,5,3].sort(function(a,b){
+	return a-b; 				// [1, 3, 3, 5, 5, 6, 8, 9, 99]
+});
+
+descending = [99,1,3,5,6,8,9,5,3].sort(function(a,b){
+ return b-a; 				// [99, 9, 8, 6, 5, 5, 3, 3, 1]
+});
+```
+
 ### map
 ändert die Werte der Elemente des Arrays
 und liefert neues Array zurück
