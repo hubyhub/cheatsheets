@@ -99,7 +99,7 @@ myString = fruits.join();		// "Apfel,Banane,Melone,Pfirsich"
 ```
 
 ### forEach
-```javascript```
+```javascript
 [1,2,3,4].forEach( callbackFunction, this )
 [10,20,30,40].forEach( function(el, index, arr){
 	console.log(el);	//liefert Elemente (10,20,30,40)
@@ -109,7 +109,7 @@ myString = fruits.join();		// "Apfel,Banane,Melone,Pfirsich"
 ```
 
 ### sort
-```javascript```
+```javascript
 var ascending, descending, fruits;
 
 fruits = ["Banana", "Orange", "Apple", "Mango"];
