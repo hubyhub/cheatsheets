@@ -114,6 +114,8 @@ var ascending, descending, fruits;
 
 fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.sort();		// default ist aufsteigend. (string oder zahl) ["Apple", "Banana", "Mango", "Orange"]
+// ACHTUNG: 
+[2, 10, 5].sort()   // ergibt [10, 2, 5] sort() sortiert auch Zahlen alphabetisch.
 fruits.reverse();	// ["Orange", "Mango", "Banana", "Apple"]
 
 // eigene compareFunction:
@@ -140,7 +142,7 @@ newArr = [10,20,30,40].map( function(el, index, arr){
 filtert bestimmte Elemente aus dem Array heraus.
 Liefert neues Array zurück
 ```javascript
-[10,20,30,40].map( function(el, index, arr){
+[10,20,30,40].filter( function(el, index, arr){
 	return el>20;		// [30,40] 
 })						
 
