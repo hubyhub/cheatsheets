@@ -232,6 +232,7 @@ foo(1,3,4,5); 			//[1, 3, 4, 5] "len" 4 "2nd" 3
 
 function foo(){
  var args = Array.prototype.slice.call(arguments); // array-like object in Array ändern
+ // kurzform: [].slice.call(arguments, 1); // ab erstem argument
  args.push(5);
  console.log(args, 'len', args.length, '2nd', args[1]);
 }
