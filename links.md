@@ -6,9 +6,13 @@
 [Intro.js](http://introjs.com/)
 [Javascript Classes and Instantiation Patterns](http://www.ryanatkinson.io/javascript-instantiation-patterns/)
 
+## Three.js
+[Create custom 2d polygon with THREE.js: https://gist.github.com/robertcasanova/6593814](https://gist.github.com/robertcasanova/6593814)
+
 ## Learning Websites
 [Node.js: https://hyperdev.com/help/learn-node-js-free-beginner-course/](https://hyperdev.com/help/learn-node-js-free-beginner-course/)
 [Three.js: http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63](http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63)
+
 
 
 ## ESP Related
