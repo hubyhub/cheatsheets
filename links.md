@@ -1,6 +1,5 @@
 # Links
-#### SVG in data-uris (CSS background)
-[https://codepen.io/tigt/post/optimizing-svgs-in-data-uris](https://codepen.io/tigt/post/optimizing-svgs-in-data-uris)
+[SVG in data-uris: https://codepen.io/tigt/post/optimizing-svgs-in-data-uris](https://codepen.io/tigt/post/optimizing-svgs-in-data-uris)
 ## Javascript
 [Javascript Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
 [Data Structures in Javascript](http://blog.benoitvallon.com/category/data-structures-in-javascript/)
