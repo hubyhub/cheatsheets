@@ -1,0 +1,71 @@
+ETF Begriffe:
+=============
+ETFs: 
+
+## Abbildungsmethoden:
+**physische Replikation:** eine KAG (=) kauft tatsächlich alle Unternehmen eines Index
+Die Gewichtung richtet sich meist nach der Gewichtung<br>
+
+**optimierte Samplingmethode:** die KAG erwirbt nicht alle Unternehmen im Index. Man versucht aber trotzdem den Index möglichst getreu abzubilden, 
+durch möglichst representative Auswahl von Unternehmen.<br>
+
+** Swap:**  hier werden ganz andere Unternehmen gekauft, die eigentlich im Index vorhanden sind.
+Grund: dividenden können auch eingetauscht werden, mehr renditen durch steuervorteile<br>
+
+
+### Thesaurierend/Gewinnausschüttend
+**Thesaurierend:** Erträge werden wieder reinvestiert. Dadurch langfristig zinseszinseffekt<br>
+**Gewinnausschüttend:** Erträge werden jährlich ausgeschüttet.<br>
+Beim Vergleichen von Charts muß man Thesaurierend und Gewinnausschüttend beachten.
+MSCI World (ausschüttend)
+MSCI World GDTR, UHD (Performance-Index Dividende Miteingerechnet)
+Andere Performance-Indices(DAX, MDAX)
+Also es gibt "DAX performance index" und "DAX Kursindex"
+**GDTR:** bedeutet Gross Dividend Total Return,  ist eine Brutto-angabe! keine Steuern werden berücksichtigt
+Es gibt aber auch **Nett return Index**. Das muß man beachten, um nicht Äpfel mit Birnen zu vergleichen.
+
+Asset Allokation: (wo legt man an? also nur aktien?, oder immobilien, rohstoffe,...)<br>
+* für den privatanleger ist es sinnvoller in einen weitgetstreuten indexportfolio zu setzen
+* Der größte ETF ist der MSCI World index bildet die wichtigsten 23 Volkswirtschaften ab.<br>
+* MSCI Emerging Markets ( Indices der Schwellenländer)
+* Empfehlung: 70% MSCI World + 30% MSCI Emerging Markets
+* MSCI All Country World ETF: fasst MSCI World und MSCI Emergin Market zusammen
+* ACWI IMI Index: berücksichtigt auch SmallCap und MidCap Firmen
+
+
+**Netto Inventar Wert**<br>
+Wert des Fondsvermögens. Also wieviel Geld im Fonds steckt.
+
+Vermögendendwert:<br>
+* ACHTUNG auch bei ETF gibt es Gebühren! 
+* Hier muß man recherchieren, welche am günstigesten
+
+### TER (Total Expense Ratio)
+* bei Beschreibung vom ETF ist auch ein TER angegeben.
+* z.B.: 0.7%
+* TER bildet nicht die kompletten kosten ab.
+* ACHTUNG: Das Verkaufsprospekt muß man genau durchlesen, um eventuell versteckte Kosten aufzudecken.
+
+### Rebalancing 
+* beispiel: man kauft ETF (A) mit 70% und ETF (B) mit 30%. falls (B) übermäßig läuft, nimmt er mehr als 30% ein.
+so sollte man bei A nachkaufen um das Verhältnis wieder herzustellen.
+
+### Steuern
+bei ETFs die im ausland ihren sitz haben und Thesaurierend sind, kann es zu einem Steueraufwand kommen.
+
+
+
+
+justetf.com
+ishares 
+
+
+
+
+
+
+
+
+
+
+
