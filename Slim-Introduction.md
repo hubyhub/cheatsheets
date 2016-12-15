@@ -7,7 +7,7 @@
 ###  1. Installation
 1. Create a folder. e.g.: "dev/slim-intro"
 2. Install composer by going to their [website](https://getcomposer.org/download/), copy the command-line code and paste it in the terminal.
-3. A composer.phar file is now in your folder, which means composer is now installed locally in the folder. (not computer-wide).
+3. A composer.phar file is now in your folder. Composer is now installed locally in the folder. (not computer-wide).
 4. Install Slim by typing following code in the command-line<br>
 	
 	```php
