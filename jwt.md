@@ -1,5 +1,7 @@
 # JWT - JSON Web Token
 **JWT:** is a open standard for passing claims
+### Tutorial:
+[Tutorial: http://mherman.org](http://mherman.org/blog/2016/10/28/token-based-authentication-with-node/#.WGpZXDsOZx9.hackernews)
  
 ### Can be passed:
 * as part of URL (Query String)
