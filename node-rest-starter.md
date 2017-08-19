@@ -89,6 +89,34 @@
 	});
 
 	```
+5. Create "public" folder and create index.html file with markup
+	```
+	<!doctype html>
+	<html class="no-js" lang="">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="x-ua-compatible" content="ie=edge">
+			<title>My WebApp</title>        
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>       
+			<p>Hello world! This is HTML5 Boilerplate.</p>		
+			<img src="img.jpg" />
+			<script src="js/main.js"></script>      
+		</body>
+	</html>
+	``` 	
+6. Start server
+	```
+	node server.js
+	```
+7. Open browser / Postman and test routes
+	```
+	http://127.0.0.1:3000
+	http://127.0.0.1:3000/api/user
+	```	
+
 	
 <a name="unit-test"></a>
 ## Unit Testing
