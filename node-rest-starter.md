@@ -35,6 +35,13 @@
 	const express = require('express');
 	const path = require('path');
 	const app = express();
+	const bodyParser = require('body-parser');
+
+	// create application/json parser 
+	var jsonParser = bodyParser.json();
+	 
+	// create application/x-www-form-urlencoded parser 
+	var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 	app.use(express.static( path.join(__dirname, 'public')));
 
@@ -42,27 +49,45 @@
 		res.sendfile('index.html');	
 	});
 
-	app.get('/user', function (req, res) {
+	app.get('/api/user', function (req, res) {
 	  res.send('Hello User');
 	});
 
-	app.post('/user', function (req, res) {
-	  res.send('Got a POST request');
-	});
+	// app.post('/api/user', function (req, res) {
+	  // res.send('Got a POST request');
+	// });
+	 
+	// POST JSON bodies 
+	app.post('/api/user', jsonParser, function (req, res) {
+	  console.log(req.body);
+	  if (!req.body){
+		return res.sendStatus(400);
+	  }
+	  res.send("welcome json: " + JSON.stringify(req.body));  
+	})
+
+	// POST urlencoded bodies 
+	app.post('/api/login', urlencodedParser, function (req, res) {
+	  if (!req.body){
+		return res.sendStatus(400);
+	  }
+	  res.send('welcome urlencoded ' + req.body.username);
+	})
 
 	//Respond to a PUT request to the /user route:
-	app.put('/user', function (req, res) {
+	app.put('/api/user', function (req, res) {
 	  res.send('Got a PUT request at /user');
 	});
 
 	//Respond to a DELETE request to the /user route:
-	app.delete('/user', function (req, res) {
+	app.delete('/api/user', function (req, res) {
 	  res.send('Got a DELETE request at /user');
 	});
 
 	app.listen(3000, function () {
 	  console.log('Example app listening on http://127.0.0.1:3000')
 	});
+
 	```
 	
 <a name="unit-test"></a>
