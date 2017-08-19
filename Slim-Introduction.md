@@ -181,18 +181,18 @@ $app->delete('/api/books/{id}', function($request){
 	
 	// display single row
 	$app->get('/api/books/{id}', function($request){
-	require_once('dbconnect.php');
-	$id = $request->getAttribute("id");
+		require_once('dbconnect.php');
+		$id = $request->getAttribute("id");
 	
-	$query  = "select * from books where id=$id";
-	$result = $mysqli->query($query);
-	$data[] = $result->fetch_assoc();
-	
-	if(isset($data)){	
-		header('Content-Type: application/json');
-		echo json_encode($data);
-	}	
-});
+		$query  = "select * from books where id=$id";
+		$result = $mysqli->query($query);
+		$data[] = $result->fetch_assoc();
+		
+		if(isset($data)){	
+			header('Content-Type: application/json');
+			echo json_encode($data);
+		}	
+	});
 ```
 
 #### POST
@@ -248,7 +248,8 @@ $app->delete('/api/books/{id}', function($request){
 ```
 <a id="links"></a>
 ## Useful Links
-[http://stackoverflow.com/questions/15089294/slim-framework-for-beginners](http://stackoverflow.com/questions/15089294/slim-framework-for-beginners)
-
+[http://stackoverflow.com/questions/15089294/slim-framework-for-beginners](http://stackoverflow.com/questions/15089294/slim-framework-for-beginners)<br>
+[HTTP Basic Auth with SLIM 1](http://www.appelsiini.net/2014/slim-database-basic-authentication)<br>
+[HTTP Basic Auth with SLIM 2](https://github.com/tuupola/slim-basic-auth)
 
 

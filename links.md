@@ -6,12 +6,26 @@
 [Intro.js](http://introjs.com/)
 [Javascript Classes and Instantiation Patterns](http://www.ryanatkinson.io/javascript-instantiation-patterns/)
 
-## Three.js
+#### Three.js
 [Create custom 2d polygon with THREE.js: https://gist.github.com/robertcasanova/6593814](https://gist.github.com/robertcasanova/6593814)
+[http://www.smartjava.org/ltjs/chapter-02/06-mesh-properties.html](http://www.smartjava.org/ltjs/chapter-02/06-mesh-properties.html)
+
+
+## PHP
+[http://www.phptherightway.com/](http://www.phptherightway.com/)
+#### SLIM
+[https://github.com/tuupola/slim-basic-auth](https://github.com/tuupola/slim-basic-auth)<br>
+[http://www.appelsiini.net/2014/slim-database-basic-authentication](http://www.appelsiini.net/2014/slim-database-basic-authentication)
+
+
+
+
 
 ## Learning Websites
 [Node.js: https://hyperdev.com/help/learn-node-js-free-beginner-course/](https://hyperdev.com/help/learn-node-js-free-beginner-course/)<br>
 [Three.js: http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63](http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63)<br>
+
+## E-books
 [DEVFreeBooks https://devfreebooks.github.io/javascript/](https://devfreebooks.github.io/javascript/)<br>
 
 

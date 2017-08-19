@@ -44,6 +44,7 @@ Vermögendendwert:<br>
 * bei Beschreibung vom ETF ist auch ein TER angegeben.
 * z.B.: 0.7%
 * TER bildet nicht die kompletten kosten ab.
+* Tracking
 * ACHTUNG: Das Verkaufsprospekt muß man genau durchlesen, um eventuell versteckte Kosten aufzudecken.
 
 ### Rebalancing 
