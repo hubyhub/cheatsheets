@@ -136,6 +136,17 @@ var newArr;
 newArr = [10,20,30,40].map( function(el, index, arr){
 	return el*el;		// liefert [100, 400, 900, 1600]
 })
+
+// passing parameters
+var arr = [1, 2, 3, 4, 5];
+
+function multiplyBy(scale) {
+    return function(num){
+        return num * scale;
+    }
+}
+console.log( arr.map( multiplyBy(4) ));
+
 ```
 
 ### filter

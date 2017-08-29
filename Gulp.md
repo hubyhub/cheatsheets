@@ -86,9 +86,10 @@ gulp.src(['js/**/*.js', '!js/**/*.min.js'])
 Glob patterns specify sets of filenames with wildcard characters.
 | Pattern         | Matches       |
 | --------------- |-------------- |
-| css/*.css       | files ending in .css in the css directory |
-| css/**/*.css    | files ending in .css in the css directory and child directories      |
-| !css/style.css  | excludes style.css filenames      |
+| js/app.js       | the exact file
+| css/*.css       | all files ending in .css in the css directory only |
+| css/**/*.css    | all files ending in .css in the css directory and all child directories      |
+| !css/style.css  | excludes style.css filenames from the match     |
 | *.+(js|css)     | Matches all files in the root directory ending in .js or .css      |
 
 
