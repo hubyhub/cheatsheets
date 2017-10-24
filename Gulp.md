@@ -2,7 +2,7 @@
 1. [Installation](#installation)
 2. [Gulpfile.js](#gulpfile)
 
-Gulp is a BUILD SYSTEM. A build system is simply a collection of tasks (comonly called "task runners") that automate repetetive work. 
+Gulp is a BUILD SYSTEM. A build system is simply a collection of tasks (comonly called "task runners") that automate repetitive work. 
 
 <a name="installation"></a>
 ##  1. Installation 
