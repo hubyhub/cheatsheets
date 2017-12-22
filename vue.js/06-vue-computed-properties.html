@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Tutorial</title>
+
+</head>
+<body>
+
+<h1>06. The Need for computed Properties</h1>
+
+<div id="root">
+
+<h1>{{reverseMessage}}</h1>
+
+    <h2>All tasks</h2>
+
+    <ul>
+        <li v-for="task in tasks" v-text="task.description"></li>
+    </ul>
+
+    <h2>Incomplete tasks</h2>
+
+    <ul>
+        <li v-for="task in incompleteTasks" v-text="task.description"></li>
+    </ul>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    var app = new Vue({
+
+        el : '#root',
+
+        data : {
+            message : "Frohe Weihnachten!",
+            tasks : [
+                {description : 'Go to store', completed : true},
+                {description : 'kauf geschenke', completed : true},
+                {description : 'lerne vue.js', completed : true},
+                {description : 'sei vue.js profi', completed : false},
+                {description : 'mach abendessen', completed : false},
+                {description : 'clean room', completed : false},
+            ]
+        },
+
+        methods : {
+
+        },
+
+        computed : {
+
+            reverseMessage : function() {
+                return  this.message.split('').reverse().join('');
+            },
+
+            incompleteTasks : function() {
+                return this.tasks.filter(function(el){
+                    return !el.completed;
+                });
+            }
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>

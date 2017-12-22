@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Tutorial</title>
+
+</head>
+<body>
+
+<h1>07. Components 101</h1>
+
+Whenever you have a template in your oomponent, it needs to **have a single root**
+
+<div id="root">
+    <my-cool-component></my-cool-component>
+
+    <task>hey whats up {{message}}</task>
+    <task>another task</task>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    Vue.component('my-cool-component', {
+
+        template : '<li>Foobar</li>',
+
+    });
+
+
+    Vue.component('task', {
+        props : ['message'],
+
+        template : '<div>Task: <slot></slot> </div>',
+
+        // ATTENTION: in components the data property returns a FUNCTION and not an OBJECT!
+        data : function() {
+            return {
+                message : 'instance Variable?'
+            }
+        }
+
+    });
+
+
+    var app = new Vue({
+
+        el : '#root',
+
+        data : {
+
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

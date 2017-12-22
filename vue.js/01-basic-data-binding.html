@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01 Vue.js Basic Data Binding</title>
+</head>
+<body>
+
+<h1>01. Basic Data Binding</h1>
+
+<div id="root">
+
+    <input type="text" id="input" v-model="message">
+
+    <p>The value of input is: {{message}}</p>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    new Vue({
+
+        el : '#root',
+
+        data : {
+
+          message : 'hello world'
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>

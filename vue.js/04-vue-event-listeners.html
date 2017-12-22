@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Tutorial</title>
+</head>
+<body>
+
+<h1>04. Event Listeners</h1>
+
+<div id="root">
+
+
+    <ul>
+
+        <li v-for="name in names" v-text="name"> </li>
+
+    </ul>
+
+    <input type="text" v-model="newName">
+
+    <button v-on:click="addName">Add Name</button>
+
+
+    <!-- just to show the keyup event-->
+    <p style="position:fixed;top:10px;right:10px">
+
+        <label>keyup</label>
+
+        <input type="text" v-model="currentKey" v-on:keyup="showKey">
+
+    </p>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    // when you give the vue instance a name
+    // you can access it by app in the console,
+    // instead of "vm0"
+    var app = new Vue({
+
+        el : '#root',
+        methods : {
+
+            addName : function() {
+
+                this.names.push( this.newName );
+
+                this.newName = '';
+
+            },
+            showKey : function() {
+                console.log(this.currentKey);
+                this.currentKey = "";
+            }
+
+        },
+        data : {
+
+            currentKey: '',
+            newName: '',
+            names: ['Manfred', 'Martina', 'Lisa', 'Robert', 'Chrisi', 'Moni']
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Tutorial</title>
+    <style>
+        .text-message {
+            display:none;
+        }
+        .is-loading {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>05. Attribute Binding & Class-Binding</h1>
+
+<div id="root">
+
+    <h3 :class="className">This Headline uses class-binding with Condition</h3>
+
+    <button v-bind:title="myTitle" v-on:click="toggleClass">Add Name</button>
+    <span class="text-message" :class="{ 'is-loading': isLoading }">is Loading...</span>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    // when you give the vue instance a name
+    // you can access it by app in the console,
+    // instead of "vm0"
+    var app = new Vue({
+
+        el : '#root',
+
+        data : {
+            myTitle : "hey whats up, title",
+            className : 'headline-type1',
+            isLoading : false
+        },
+
+        methods : {
+
+            toggleClass : function() {
+                this.isLoading = !this.isLoading;
+            }
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>

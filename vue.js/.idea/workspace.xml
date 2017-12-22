@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/07 - compontents-101.md" line="22" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5821926c-60cc-4e86-b722-ff0da0c13b88" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vue.js.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/01 - basic-data-binding.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02 - setup-vue-devtools.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/03 - lists.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/04 - vue-event-listeners.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/05 - attribute-and-class-binding.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/06 - the-need-for-computed-properties.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07 - compontents-101.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/08 - components-within-compontents.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09 - components-exercise-1-message.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10 - components-exercise-2-modal.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11 - components-exercise-3-tabs.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12 - component-communication-example-1-custom-events.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/13 - component-communication-example-2-event-dispatcher.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/01-basic-data-binding.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/03-lists.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/04-vue-event-listeners.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/05-vue-attribute-binding.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/06-vue-computed-properties.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07-vue-components-101.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/08-components-within-components.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01 - basic-data-binding.md" afterPath="$PROJECT_DIR$/01 - basic-data-binding.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02 - setup-vue-devtools.md" afterPath="$PROJECT_DIR$/02 - setup-vue-devtools.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/03 - lists.md" afterPath="$PROJECT_DIR$/03 - lists.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/04 - vue-event-listeners.md" afterPath="$PROJECT_DIR$/04 - vue-event-listeners.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/05 - attribute-and-class-binding.md" afterPath="$PROJECT_DIR$/05 - attribute-and-class-binding.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/06 - the-need-for-computed-properties.md" afterPath="$PROJECT_DIR$/06 - the-need-for-computed-properties.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/07 - compontents-101.md" afterPath="$PROJECT_DIR$/07 - compontents-101.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/08 - components-within-compontents.md" afterPath="$PROJECT_DIR$/08 - components-within-compontents.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +32,78 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="08 - components-within-compontents.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08 - components-within-compontents.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="08-components-within-components.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/08-components-within-components.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="09 - components-exercise-1-message.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/09 - components-exercise-1-message.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/01-basic-data-binding.md.html" />
+        <option value="$PROJECT_DIR$/01 - basic-data-binding.md" />
+        <option value="$PROJECT_DIR$/02-setup-vue-devtools.html" />
+        <option value="$PROJECT_DIR$/01-basic-data-binding.html" />
+        <option value="$PROJECT_DIR$/02 - setup-vue-devtools.md" />
+        <option value="$PROJECT_DIR$/03 - lists.md" />
+        <option value="$PROJECT_DIR$/03-lists.html" />
+        <option value="$PROJECT_DIR$/04-vue-event-listeners.html" />
+        <option value="$PROJECT_DIR$/04 - vue-event-listeners.md" />
+        <option value="$PROJECT_DIR$/05 - attribute-and-class-binding.md" />
+        <option value="$PROJECT_DIR$/05-vue-attribute-binding.html" />
+        <option value="$PROJECT_DIR$/06-vue-computed-properties.html" />
+        <option value="$PROJECT_DIR$/06 - the-need-for-computed-properties.md" />
+        <option value="$PROJECT_DIR$/07 - compontents-101.md" />
+        <option value="$PROJECT_DIR$/07-vue-components-101.html" />
+        <option value="$PROJECT_DIR$/08-components-within-components.html" />
+        <option value="$PROJECT_DIR$/08 - components-within-compontents.md" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -77,6 +151,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\cheatsheets\vue.js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -100,17 +181,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513932239947</updated>
-      <workItem from="1513932241317" duration="120000" />
+      <workItem from="1513932241317" duration="15152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120000" />
+    <option name="totallyTimeSpent" value="15152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -137,5 +219,193 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/02-setup-vue-devtools.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-basic-data-binding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02 - setup-vue-devtools.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03 - lists.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="1" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04 - vue-event-listeners.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="3" />
+            <folding>
+              <marker date="1513937285277" expanded="true" signature="336:418" ph="{...}" />
+              <marker date="1513937285277" expanded="true" signature="353:415" ph="{...}" />
+              <marker date="1513937285277" expanded="true" signature="389:409" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04-vue-event-listeners.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05-vue-attribute-binding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05 - attribute-and-class-binding.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="3" />
+            <folding>
+              <marker date="1513941846561" expanded="true" signature="526:637" ph="{...}" />
+              <marker date="1513941846561" expanded="true" signature="540:634" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 - basic-data-binding.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06 - the-need-for-computed-properties.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <folding>
+              <marker date="1513945380403" expanded="true" signature="558:612" ph="..." />
+              <marker date="1513945380403" expanded="true" signature="659:692" ph="..." />
+              <marker date="1513945380403" expanded="true" signature="727:950" ph="{...}" />
+              <marker date="1513945380403" expanded="true" signature="766:807" ph="{&quot;message&quot;: 'hello world'...}" />
+              <marker date="1513945380403" expanded="true" signature="831:947" ph="{...}" />
+              <marker date="1513945380403" expanded="true" signature="870:940" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07 - compontents-101.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="289">
+            <caret line="17" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <folding>
+              <marker date="1513947245436" expanded="true" signature="294:314" ph="..." />
+              <marker date="1513947245436" expanded="true" signature="597:645" ph="{&quot;template&quot;: '&lt;li&gt;Foobar&lt;/li&gt;'...}" />
+              <marker date="1513947245436" expanded="true" signature="597:794" ph="{...}" />
+              <marker date="1513947245436" expanded="true" signature="663:788" ph="{...}" />
+              <marker date="1513947245436" expanded="true" signature="692:770" ph="{&quot;message&quot;: 'instance Variable?'...}" />
+              <marker date="1513947245436" expanded="true" signature="841:892" ph="{&quot;template&quot;: '&lt;li&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/li&gt;'...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-vue-components-101.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06-vue-computed-properties.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="67" column="6" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="67" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08 - components-within-compontents.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09 - components-exercise-1-message.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08-components-within-components.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

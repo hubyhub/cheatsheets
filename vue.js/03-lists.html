@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03 Vue.js lists</title>
+</head>
+<body>
+
+<h1>03. lists</h1>
+
+<div id="root">
+
+
+    <p>Names in Array</p>
+
+    <ul>
+
+        <li v-for="name in names" v-text="name"> </li>
+
+    </ul>
+
+    <!-- {{names}} or the "v-text" - directive are fine
+    <ul>
+        <li v-for="name in names">{{name}}</li>
+    </ul>
+    -->
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    // when you give the vue instance a name
+    // you can access it by app in the console,
+    // instead of "vm0"
+    var app = new Vue({
+
+        el : '#root',
+
+        data : {
+
+            names : ['Manfred', 'Martina', 'Lisa', 'Robert', 'Chrisi', 'Moni'],
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+</html>

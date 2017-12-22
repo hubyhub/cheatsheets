@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Tutorial</title>
+
+</head>
+<body>
+
+<h1>08. Components within Components</h1>
+
+<div id="root">
+
+    <task-list></task-list>
+
+</div>
+
+<script src="vue.js"></script>
+
+
+<script>
+
+    Vue.component('task-list',{
+        template : '<ul><task v-for="task in tasks">{{task.description}}</task></ul>',
+
+        data : function(){
+            return {
+                tasks : [
+                    {description : 'Go to store', completed : true},
+                    {description : 'kauf geschenke', completed : true},
+                    {description : 'lerne vue.js', completed : true},
+                    {description : 'sei vue.js profi', completed : false},
+                    {description : 'mach abendessen', completed : false},
+                    {description : 'clean room', completed : false},
+                ]
+            }
+        }
+
+    });
+
+    Vue.component('task',{
+        template : '<li><slot></slot></li>'
+
+    });
+
+
+    new Vue({
+        el : '#root',
+    })
+
+</script>
+
+
+</body>
+</html>
