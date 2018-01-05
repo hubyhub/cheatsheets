@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <style>
+        .container{
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="root" class="container">
+
+    <h1 class="title">
+        10. Components Exercise 2 - Modal
+    </h1>
+
+    <modal v-if="showModal" @close="showModal = false" >hey modal</modal>
+<button @click="showModal=true">Show Modal</button>
+</div>
+
+<script src="vue.js"></script>
+
+
+<script>
+
+
+
+    Vue.component('modal', {
+
+        props : [''],
+
+        template: `
+            <div class="modal is-active">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box"><slot></slot></div>
+                </div>
+                <button class="modal-close is-large" aria-label="close" @click="$emit('close')"></button>
+            </div>
+        `,
+
+        created: function() {
+
+        },
+
+        methods: {
+            closeModal : function() {
+
+            }
+        },
+
+        data: function() {
+            return {
+
+            }
+        }
+
+    });
+
+    new Vue({
+        el : '#root',
+        data :{
+            showModal: false,
+        }
+    })
+
+</script>
+
+</body>
+</html>

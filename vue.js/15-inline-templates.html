@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <style>
+        .container {
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="root" class="container">
+
+    <progress-view inline-template>
+        <div>
+            <h1>Hello Inline-Template. CompletionRate: {{ completionRate}}</h1>
+            <button @click="completionRate += 0.1" >Increase</button>
+        </div>
+    </progress-view>
+
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    Vue.component('progress-view',{
+
+        data : function(){
+            return{
+                completionRate : 0.5
+            }
+        }
+    });
+
+
+    new Vue({
+        el: '#root',
+
+        data: {
+
+
+        },
+
+
+    })
+
+</script>
+
+</body>
+</html>

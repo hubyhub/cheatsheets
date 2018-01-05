@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <style>
+        .container{
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="root" class="container">
+
+    <h1 class="title">
+        09. Components Exercise 1 - Message
+    </h1>
+    <message title="Hello WOrld title" body="Lorem ipsum text"></message>
+    <message title="cooler titel 2" body="super tolle nachricht"></message>
+
+
+
+</div>
+
+<script src="vue.js"></script>
+
+
+<script>
+
+
+
+    Vue.component('message', {
+
+        props : ['title', 'body'],
+
+        template: `
+           <article class="message" v-show="isVisible">
+                <div class="message-header">
+                    <p>{{title}}</p>
+                    <button class="delete" aria-label="delete" @click="closeModal()"></button>
+                </div>
+                <div class="message-body">
+                    {{body}}
+                </div>
+           </article>
+        `,
+
+        created: function() {
+
+        },
+
+        methods: {
+            closeModal : function() {
+                this.isVisible = false;
+            }
+        },
+
+        data: function() {
+            return {
+                isVisible : true,
+                // closeModal : function(){
+                //     this.isVisible = false;
+                // }
+                // title : "hey",
+                // body : "du"
+            }
+        }
+
+    });
+
+    new Vue({
+        el : '#root',
+    })
+
+</script>
+
+</body>
+</html>

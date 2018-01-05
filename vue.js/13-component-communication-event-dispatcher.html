@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <style>
+        .container {
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="root" class="container">
+
+    <h1 class="title">
+        13. Components Communication - Event Dispatcher
+    </h1>
+    <coupon></coupon>
+    <p v-if="couponApplied">Coupon applied</p>
+</div>
+
+<script src="vue.js"></script>
+
+<script>
+
+    window.Event = new Vue();
+
+    Vue.component('coupon',{
+
+        template:`
+            <input type="text" placeholder="Enter coupon number" v-on:blur="onCouponApplied">
+        `,
+
+        methods: {
+            onCouponApplied: function() {
+                console.log("now emmit")
+                Event.$emit('applied');
+            }
+        }
+    });
+
+
+    new Vue({
+        el: '#root',
+
+        data: {
+            couponApplied : false
+        },
+
+        methods: {
+            onShowApplied: function(){
+                console.log("applied");
+                this.couponApplied = true;
+            }
+        },
+        created: function() {
+            var that = this;
+            Event.$on('applied', function(){
+                console.log("received")
+                that.couponApplied = true;
+            })
+        }
+    })
+
+</script>
+
+</body>
+</html>
