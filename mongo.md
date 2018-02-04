@@ -1,20 +1,20 @@
-MONGODB
+ï»¿MONGODB
 =========
 
-* ``mongod.exe`` ist der Server der im Hintergrund läuft
-* ``mongo.exe``  ist der Client für die Queries 
+* ``mongod.exe`` ist der Server der im Hintergrund lÃ¤uft
+* ``mongo.exe``  ist der Client fÃ¼r die Queries 
 
 * beim starten von mongod.exe muss man ein *data-directory* angeben. In diesem Ordner wird die Datenbank gespeichert.
     *  Das default-Verzeichnis ist  "_C:\data\db_"
     *  Ein benutzerdefiniertes *data-directory* definiert man mit:     
 >     C:\Program Files (x86)\MongoDB\Server\3.0\bin>mongod.exe --dbpath C:\Data\mongodb
 	
-* die Datenbank horcht default-mäßig auf Port 27017
+* die Datenbank horcht default-mÃ¤ÃŸig auf Port 27017
 
-* Um auf MongoDB mit PHP zugreifen zu können, muß man die [PHP Treiber](http://docs.mongodb.org/ecosystem/drivers/php/) installieren    
+* Um auf MongoDB mit PHP zugreifen zu kÃ¶nnen, muÃŸ man die [PHP Treiber](http://docs.mongodb.org/ecosystem/drivers/php/) installieren    
 (Bei mir hat nur version php_mongo-1.5.1.zip von hier [https://s3.amazonaws.com/drivers.mongodb.org/php/index.html](https://s3.amazonaws.com/drivers.mongodb.org/php/index.html) funktioniert.)  
 
-* Plugin für Netbeans "Tools-->Plugins --> NBMongo" 
+* Plugin fÃ¼r Netbeans "Tools-->Plugins --> NBMongo" 
   In Netbeans unter dem Tab "Services" taucht dann die MongoDB auf
 
 * Mongo-Shell in Netbeans:   
@@ -27,32 +27,32 @@ MONGODB
 * _collections_ ist eine Gruppe von gleichen Daten. z.B. (Users, Players, Employees,...)
 * In _collections_ befinden sich _documents_ 
 * _documents_ sind im wesentlichen JSON-Objekte mit _"name-value"_-Paaren  
-* MongoDB fügt *automatisch* eine ObjectId  als UNIQUE-Identifier zu jedem _document_  ``"_id" : ObjectId("r23jlasd982as90fa")``   
-* Die _id wird aus performance-gründen automatisch indiziert.
+* MongoDB fÃ¼gt *automatisch* eine ObjectId  als UNIQUE-Identifier zu jedem _document_  ``"_id" : ObjectId("r23jlasd982as90fa")``   
+* Die _id wird aus performance-grÃ¼nden automatisch indiziert.
 
 ### Befehle
 `show dbs` listet alle Datenbanken (_'local'_ ist default-db und wird automatisch erzeugt)   
 `use names` erzeugt eine neue Datenbank "names", und/oder setzt den scope auf "names"   
 `db` listet die aktuelle DB (aktueller scope)   
 `show collections` listet alle _collections_ in der aktuellen DB   
-`db.mynames.insert({name:'superman'})` erzeugt eine neue _collection_ "mynames" in der aktuellen DB und fügt ein _document_ ein   
-`db.mynames.insert([ {},{},{} ])`      in Form eines Arrays können mehrere _documente_ gleichzeitig eingefügt werden.   
-`db.mynames.remove()`                  löscht alle _documents_ in der collection "mynames"  
+`db.mynames.insert({name:'superman'})` erzeugt eine neue _collection_ "mynames" in der aktuellen DB und fÃ¼gt ein _document_ ein   
+`db.mynames.insert([ {},{},{} ])`      in Form eines Arrays kÃ¶nnen mehrere _documente_ gleichzeitig eingefÃ¼gt werden.   
+`db.mynames.remove()`                  lÃ¶scht alle _documents_ in der collection "mynames"  
 `db.mynames.remove({"_id" : ObjectId("123456abc")})` entfernt das _document_ mit dieser _id von der collection   
-`db.mynames.update({"_id" : ObjectId("123456abc")},{name:'batman'} )`  überschreibt das zur "_id" gehörende _document_ mit dem überlieferten _document_   
-`db.mynames.drop()` löscht die komplette _Collection_ 
-`databasename.dropDatabase()` 	löscht die DB mit dem namen "databasename"       
+`db.mynames.update({"_id" : ObjectId("123456abc")},{name:'batman'} )`  Ã¼berschreibt das zur "_id" gehÃ¶rende _document_ mit dem Ã¼berlieferten _document_   
+`db.mynames.drop()` lÃ¶scht die komplette _Collection_ 
+`databasename.dropDatabase()` 	lÃ¶scht die DB mit dem namen "databasename"       
 
 #### Find und Suchqueries
-`db.mynames.find()`                    listet ALLE _documente_ in der _Collection_ "mynames". Suchparameter sind möglich.   
-`db.mynames.find().pretty()`           liefert eine schön-formatierte Ausgabe  
+`db.mynames.find()`                    listet ALLE _documente_ in der _Collection_ "mynames". Suchparameter sind mÃ¶glich.   
+`db.mynames.find().pretty()`           liefert eine schÃ¶n-formatierte Ausgabe  
 `db.mynames.findOne()`                 listet das erste _document_ in der Collection  
 `db.mynames.find( {"name": "batman" } )` liefert alle _documente_ bei denen "name" gleich "batman" ist   
-`db.mynames.find( {"name": "batman", "job" : "superhero" } )` **UND** - Verknüpfung: Liefert alle _documente_ mit namen "batman" und job "superhero".   
-`db.mynames.find( { $or: [ {"name": "batman"}, {"job" : "superhero"} ] )` **OR**-Verknüpfung: wird mit $or:[ ] erzeugt.   
-`db.mynames.find( {"age" : {$gt:30} } )`  **größer als**: liefert alle _documente_ bei denen age *größer* als 30 ist.   
+`db.mynames.find( {"name": "batman", "job" : "superhero" } )` **UND** - VerknÃ¼pfung: Liefert alle _documente_ mit namen "batman" und job "superhero".   
+`db.mynames.find( { $or: [ {"name": "batman"}, {"job" : "superhero"} ] )` **OR**-VerknÃ¼pfung: wird mit $or:[ ] erzeugt.   
+`db.mynames.find( {"age" : {$gt:30} } )`  **grÃ¶ÃŸer als**: liefert alle _documente_ bei denen age *grÃ¶ÃŸer* als 30 ist.   
 `db.mynames.find( {"age" : {$lt:30} } )`  **kleiner als**: liefert alle _documente_ bei denen age *kleiner* als 30 ist.    
-`db.mynames.find( {"age" : {$gte:30} } )` **größer-gleich als**: liefert alle _documente_ bei denen age größer als oder gleich 30 ist.   
+`db.mynames.find( {"age" : {$gte:30} } )` **grÃ¶ÃŸer-gleich als**: liefert alle _documente_ bei denen age grÃ¶ÃŸer als oder gleich 30 ist.   
 `db.mynames.find( {"age" : {$lte:30} } )` **kleiner-gleich als**: liefert alle _documente_ bei denen age kleiner als oder gleich 30 ist.    
 `db.mynames.find( {"age" : {$ne:30} } )`  **nicht**: liefert alle _documente_ bei denen age *nicht* 30 ist.    
 `db.mynames.find( {"name": "batman", "_id": 0, "job": 0 } } )` **Exklusion**: "_id" und "job" werden nicht im Ergebnis angezeigt
@@ -67,9 +67,9 @@ MONGODB
 
 
 ### Indizierung
-`db.mynames.getIndexes()` zeigt an, welche Indizes man erstellt hat. ("_id" wird standardmäßig indiziert)   
+`db.mynames.getIndexes()` zeigt an, welche Indizes man erstellt hat. ("_id" wird standardmÃ¤ÃŸig indiziert)   
 `db.mynames.ensureIndex( {"age":1} )` **ensureIndex**: erstellt aus dem Ergebnis einen Index
-`db.mynames.dropIndex( {"age":1} )` **dropIndex**: löscht den Index   
+`db.mynames.dropIndex( {"age":1} )` **dropIndex**: lÃ¶scht den Index   
 
 
 ### Aggregation und Gruppen
@@ -85,20 +85,20 @@ Mit der **aggretate()** -function erzeugt man eine **Daten-Gruppe**, und kann da
 ```    
 
 
-*  **id:** Gruppiert die *users*-Ergebnisse; In diesem Fall nach der Augenfarben. Das heißt, man bekommt hier mehrere Gruppen zurück, je nachdem wie viele unterschiedliche
+*  **id:** Gruppiert die *users*-Ergebnisse; In diesem Fall nach der Augenfarben. Das heiÃŸt, man bekommt hier mehrere Gruppen zurÃ¼ck, je nachdem wie viele unterschiedliche
 Augenfarben es in den *users* gibt.  *eyeColor* ist ein *key* in dem *document*
 Nun kann man weitere Berechnungen auf diesen Gruppen machen:   
-*  **{ $sum : 1 }** liefert die Summe zurück. Wievele Einträge gibt es? ("1" bedeutet hier "true")   
-*  **{ $avg : "$age" }** liefert den Durchschnitt pro Gruppe zurück.
-*  **{ $max : "$age" }** liefert Eintrag mit dem höchsten Betrag zurück
+*  **{ $sum : 1 }** liefert die Summe zurÃ¼ck. Wievele EintrÃ¤ge gibt es? ("1" bedeutet hier "true")   
+*  **{ $avg : "$age" }** liefert den Durchschnitt pro Gruppe zurÃ¼ck.
+*  **{ $max : "$age" }** liefert Eintrag mit dem hÃ¶chsten Betrag zurÃ¼ck
  
 
 
 
 ### Monitoring
-`db.mynames.find( {"name": "batman" } ).explain("executionStats")` Liefert **Metadaten** über das Suchergebnis zurück   
-z.B **totalDocsExamined: 36**  sagt aus, dass bei dieser Suche 30 Einträge durchsucht werden müssen.    
-Ohne Indizierung müssen alle _documente_ durchsucht werden
+`db.mynames.find( {"name": "batman" } ).explain("executionStats")` Liefert **Metadaten** Ã¼ber das Suchergebnis zurÃ¼ck   
+z.B **totalDocsExamined: 36**  sagt aus, dass bei dieser Suche 30 EintrÃ¤ge durchsucht werden mÃ¼ssen.    
+Ohne Indizierung mÃ¼ssen alle _documente_ durchsucht werden
 
 
 ### Tutorials:
