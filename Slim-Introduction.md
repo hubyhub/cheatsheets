@@ -23,6 +23,7 @@
 	
 	```php
 	php composer.phar require slim/slim "^3.6"
+	# instead of:  composer require slim/slim "^3.6"
 	```
 	That will create a **composer.json** in the root folder,<br> 
 	and a **vendor/** folder, and download all the dependencies in that folder<br>
@@ -62,11 +63,17 @@
 	```
 
 	Point to the Folder, and set the server-name
-	```
+	```xml
 	<VirtualHost 127.0.0.1>    
 		ServerName slimintro  
 		DocumentRoot C:/xampp/htdocs/slimintro
 	</VirtualHost>
+	#or maybe better this
+	<VirtualHost *:80>    
+		ServerName whatever.localhost  
+		DocumentRoot C:/xampp/htdocs/whatever
+	</VirtualHost>
+	
 	```
 	Is only the htdocs folder allowed?
 11. and add hostfile entry (C:\Windows\System32\drivers\etc)
@@ -172,7 +179,8 @@ $app->delete('/api/books/{id}', function($request){
 ```php
 <?php
 	// display all records
-	$app->get('/api/books', function(){
+	    
+	$app->get('/api/books', function(Request $request, Response $response){
 		require_once('dbconnect.php');
 		$query = "select * from books order by id";
 		$result = $mysqli->query($query);
@@ -180,9 +188,11 @@ $app->delete('/api/books/{id}', function($request){
 		while($row = $result->fetch_assoc()){
 			$data[] = $row;
 		}
+		
 		if(isset($data)){	
-			header('Content-Type: application/json');
-			echo json_encode($data);
+			//header('Content-Type: application/json; charset=utf-8'); // widthJson is adding that automatically
+			return $response					
+				->withJson($data, 200, JSON_UNESCAPED_UNICODE);
 		}
 	});
 	
