@@ -263,6 +263,58 @@ $app->delete('/api/books/{id}', function($request){
 	
 	
 ```
+
+
+#### JSON RETURN
+
+```
+$app->get('/', function (Request $request, Response $response) {	
+    require_once('dbconnect.php');	
+	
+	$query = "SELECT * FROM fooddb.food;";
+    $result = $mysqli->query($query);
+	
+	while($row = $result->fetch_assoc()){
+		$data[] = $row;
+	}
+	
+	return $response->withJson($data, 200, JSON_UNESCAPED_UNICODE);		
+		
+});
+
+```
+
+#### Prepard Statement
+```
+$app->get('/food/{title}', function (Request $request, Response $response) {  
+	require_once('dbconnect.php');	
+	
+	$title = $request->getAttribute("title");
+	$search = "$title%";
+			
+	$stmt = $mysqli->prepare("
+			   SELECT Id, Title 
+			   FROM fooddb.food 
+			   WHERE UPPER(Title) LIKE UPPER(?)");
+	mysqli_stmt_bind_param($stmt, 's', $search);			   
+	
+    $stmt->execute();
+	$res = $stmt->get_result();
+	$data = $res->fetch_assoc();
+			
+	$obj = (object) [
+		'FoundFood' => $data		
+	];
+	
+	return $response->withJson($obj, 200, JSON_UNESCAPED_UNICODE);		
+		
+});
+
+```
+
+
+
+
 <a id="links"></a>
 ## Useful Links
 [http://stackoverflow.com/questions/15089294/slim-framework-for-beginners](http://stackoverflow.com/questions/15089294/slim-framework-for-beginners)<br>
