@@ -39,8 +39,8 @@ npm install less -g     # in Webstorm add File->Settings->Tools->FileWatchers->L
 ```
 
 ## IntelliJ
-1. Install "FileWatchers": "Ctrl"+ "Alt"+ "S"  --> Plugins --> Install Jetbrains Plugins --> "Filewatchers"
-2. File->Settings->Tools->FileWatchers->Less
+1. Install "FileWatchers": "Ctrl"+ "Alt"+ "S"  --> Plugins --> Install Jetbrains Plugins --> "File Watchers"
+2. File->Settings->Tools->File Watchers->Less
 3. Keymap (CTRL+ALT+S) use default
 	* change Undo: CTRL+Z
 	* change Redo: CTRL+Y
