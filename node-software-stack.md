@@ -1,0 +1,17 @@
+- Routing<br>
+- Cookie and body parsing<br>
+- Session management<br>
+- MongoDB integration<br>
+- Passport.js for authentication with a couple of providers (FB and Twitter)<br>
+- File system access<br>
+- HTTPS and SPDY/HTTP2 support<br>
+- Compression support<br>
+- Logging with winston and morgan, including loggly integration<br>
+- Referer spam filtering<br>
+- Pug templates<br>
+- Hexo blog integration<br>
+- Path resolution support<br>
+- Request validation and redirects<br>
+- Static content support<br>
+- Stripping headers such as X-Powered-By, and adding other headers such as the all-important X-Clacks-Overhead<br>
+- Error handling<br>
