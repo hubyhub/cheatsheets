@@ -10,24 +10,35 @@
 <a name="installation"></a>
 ##  Installation
 1. Create a folder. e.g.: "dev/slim-intro"
-2. Install composer by going to their [website](https://getcomposer.org/download/), copy the command-line code and paste it in the terminal.
+2. Install composer from the website [website](https://getcomposer.org/download/),
+ You can also use a local composer file, by copying the command-line code from the website and paste it in the terminal.
 
 	```sh
 	 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 	 php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 	 php composer-setup.php
 	 php -r "unlink('composer-setup.php');"
+	 
 	```
 3. A composer.phar file is now in your folder. Composer is now installed locally in the folder. (not computer-wide).
 4. Install Slim by typing following code in the command-line<br>
 	
 	```php
+	
 	php composer.phar require slim/slim "^3.6"
-	# instead of:  composer require slim/slim "^3.6"
+	# or just:
+	composer require slim/slim "^3.6"
 	```
 	That will create a **composer.json** in the root folder,<br> 
 	and a **vendor/** folder, and download all the dependencies in that folder<br>
 	*(Another possibility is to install the skeleton from the [Slim-webite](https://www.slimframework.com/))*
+	
+	```
+	#or run:
+	composer install
+	# if you have an existing composer.json
+	```
+	
 6. In the root folder create a folder **/public** and a index.php
 7. Paste the HelloWorld code from [Slim-webite](https://www.slimframework.com/) in the index.php 
 	```php
@@ -313,6 +324,8 @@ $app->get('/food/{title}', function (Request $request, Response $response) {
 ```
 
 
+TIPP:
+To enable Syntax-highlighting in Webstorm go to "Settings"--> Editor --> "File Types" and add "*.php" as "Registered Pattern" for PHP
 
 
 <a id="links"></a>
