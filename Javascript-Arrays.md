@@ -65,20 +65,20 @@ arr2.indexOf(yourObj);			// Wird gefunden! (1)
 
 ```
 
-### slice
+### slice - slice(start, deleteCount,...items)
 ```javascript
-arr.slice();	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
-arr.slice(0);	// liefert gesamtes Array zurück. Array "arr" bleibt unverändert. 
-arr.slice(3);	// liefert array ab index 3 zurück. Array "arr" bleibt unverändert.
-arr.slice(3,4);	// liefert array zwischen index 3 und 4 zurück. Array "arr" bleibt unverändert. 
+arr.slice();	// erzeugt eine copy von arr.   Array "arr" bleibt unverändert. 
+arr.slice(0);	// erzeugt eine copy von arr. 
+arr.slice(3);	// erzeugt eine copy von arr ab index 3. Array "arr" bleibt unverändert.
+arr.slice(3,4);	// erzeugt eine copy von arr mit den werten zwischen index 3 und 4. Array "arr" bleibt unverändert. 
 ```
 
-### splice
+### splice -(splice, 
 ```javascript
-arr.splice(0);	  // trennt das Array wirklich ab, ab index 0! Array hat dann keine Elemente mehr.
-arr.splice(3);	  // löscht Elemente vom array ab index 3 und liefert Array von gelöschten Elementen
-arr.splice(2,3);  // löscht ab index 2, die nächsten 3 elemente, und liefert Array von gelöschten Elementen zurück.
-arr.splice(2,3, "newEl1", "newEl2");  // löscht Elemente, und fügt an der Stelle die neuen Elemente ein.
+arr.splice(0);	  // entfernt alle elemente aus dem array. liefert neues array mit entfernten elementen zurück. "arr" hat keine Elemente mehr.
+arr.splice(3);	  // entfernt alle elemente ab index 3, liefert neues array mit entfernten elementen zurück
+arr.splice(2,3);  // entfernt ab index 2 die nächsten 3 elemente, liefert neues array mit entfernten elementen zurück
+arr.splice(2,3, "newEl1", "newEl2");  // entfernt ab index 2 die nächsten 3 elemente, und fügt an der Stelle die neuen Elemente ein.
 
 delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bleibt unverändert.
 ```
