@@ -13,9 +13,10 @@ arr[1] 			// gibt "2" zurück
 arr.length(); 				// liefert length zurück
 arr.length = 3; 			// beschneidet array, alles nach 3.pos ist weg.
 ```
-
+ 
 ### push 
 ```javascript
+// does mutate the original array ( see concat for no mutation)
 arr.push("myString");		// fügt element an LETZTER Stelle ein und liefert neue length zurück
 arr.push("s1", "s2");		// mehrere Elemente können gleichzeitig eingefügt werden
 arr.push();			// liefert nur length zurück
@@ -85,6 +86,7 @@ delete arr[3]	// ändert Element an Index 3 zu "undefined". Length des Arrays bl
 
 ### concat  
 ```javascript
+// the concat() method does not mutate the original array
 var arr1, arr2, arr3;
 arr1 = ["Apfel","Banane"];
 arr2 = ["Melone", "Pfirsich"];
