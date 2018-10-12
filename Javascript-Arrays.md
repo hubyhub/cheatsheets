@@ -65,7 +65,7 @@ arr2.indexOf(yourObj);			// Wird gefunden! (1)
 
 ```
 
-### slice - slice(start, deleteCount,...items)
+### slice - slice(start?, end?)
 ```javascript
 arr.slice();	// erzeugt eine copy von arr.   Array "arr" bleibt unverändert. 
 arr.slice(0);	// erzeugt eine copy von arr. 
@@ -73,7 +73,7 @@ arr.slice(3);	// erzeugt eine copy von arr ab index 3. Array "arr" bleibt unver�
 arr.slice(3,4);	// erzeugt eine copy von arr mit den werten zwischen index 3 und 4. Array "arr" bleibt unverändert. 
 ```
 
-### splice -(splice, 
+### splice - splice(start, deleteCount,...items) 
 ```javascript
 arr.splice(0);	  // entfernt alle elemente aus dem array. liefert neues array mit entfernten elementen zurück. "arr" hat keine Elemente mehr.
 arr.splice(3);	  // entfernt alle elemente ab index 3, liefert neues array mit entfernten elementen zurück
