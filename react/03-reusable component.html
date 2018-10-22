@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Beginner's Guide to React</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+<!-- Babel Standalone compiles JSX to HTML -->
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<!-- text/babel -->
+<script type="text/babel">
+    const rootElement = document.getElementById('root');
+
+
+    const Message = (props) => <div>{props.msg}</div>;
+    const MessageChildren = (props) => <div>{props.children}</div>;
+
+    const element = <div className='container'>
+        {React.createElement(Message, {msg : 'hello World --> React.CreateElement'})}
+        {Message({msg : 'hello World --> Message()'})}
+        <Message msg="Hello World --> React Component"/>
+        <MessageChildren>Hello Children --> React Component with props.children</MessageChildren>
+    </div>;
+
+    // React.createElement:
+    // * can take string '<div>' to render element
+    // * can also take function and it will take the props to the function and the function will render more elements
+    // * instead of React.createElement() just write <NameOfComponent>
+    //      * Components take uppercase name
+
+
+    ReactDOM.render(element, rootElement);
+
+    console.log(element)
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Beginner's Guide to React</title>
+        <meta charSet="UTF-8"/>
+    </head>
+    <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+    <style>
+        .button{
+            background-color:#dcdcdc;
+            color:#666;
+            padding:3px;
+            border:1px solid #444;
+            margin-left:10px;
+            display: inline-block;
+            width:10px;
+            height:10px;
+            text-align:center;
+            line-height: 10px;
+            cursor: pointer;
+        }
+        .add{
+            background-color:#dcdcdc;
+            color:#666;
+            padding:3px;
+            border:1px solid #444;
+            margin-left:10px;
+            display: inline-block;
+            width:10px;
+            height:10px;
+            text-align:center;
+            line-height: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script type="text/babel">
+
+        class App extends React.Component {
+
+            static backupItems = [
+                {id : 'a', value: 'apple'},
+                {id : 'o', value: 'orange'},
+                {id : 'b', value: 'banana'},
+                {id : 'g', value: 'grape'},
+                {id : 'p', value: 'pear'}
+            ];
+
+            state = {
+                allItems : [
+                    {id : 'a', value: 'apple'},
+                    {id : 'o', value: 'orange'},
+                    {id : 'b', value: 'banana'},
+                    {id : 'g', value: 'grape'},
+                    {id : 'p', value: 'pear'}
+                ]
+            };
+
+            removeItem(id) {
+                this.setState(
+                    {allItems : this.state.allItems.filter(function(el){
+                        return el.id !== id;
+                    })}
+                );
+                console.log("remove",id)
+            }
+
+            addItem() {
+                console.log("asdf");
+                this.setState(
+                    {allItems : App.backupItems.slice()}
+                );
+            }
+
+            render() {
+                return (
+                    <div>
+                        <div className="add" onClick={() => this.addItem()}>+</div>
+                        {this.state.allItems.map(item => (
+                        <div key={item.id}>{item.value}<span className="button" onClick={() => this.removeItem(item.id) }>-</span></div>
+                    ))}</div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <App/>,
+            document.getElementById('root'),
+        )
+
+    </script>
+    </body>
+</html>

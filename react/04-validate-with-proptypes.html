@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Beginner's Guide to React</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>-->
+
+<!-- FOR PROPTYPES TO WORK YOU NEED TO RUN DEV-VERSION OF REACT -->
+<script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+
+<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+
+<!-- Babel Standalone compiles JSX to HTML -->
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<!-- PROPTYPES IS ITS OWN -->
+<script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+<!-- text/babel -->
+<script type="text/babel">
+    const rootElement = document.getElementById('root');
+
+    function SayHello(props){
+        console.log(props);
+        return <div>hello {props.firstName} {props.lastName}</div>
+    }
+
+    SayHello.propTypes = {
+        firstName : PropTypes.string.isRequired,
+        lastName : PropTypes.string.isRequired
+    };
+
+    class SayHelloAsClass extends React.Component{
+        static propTypes ={
+            firstName : PropTypes.string.isRequired,
+            lastName : PropTypes.string.isRequired
+        }
+
+        render(){
+            const{firstName, lastName} = this.props;
+            return (
+                <div>
+                    <SayHello firstName={this.props.firstName} lastName="hey"/>
+                    Hello {firstName} {lastName}!
+                </div>
+            )
+        }
+    }
+
+    const lastname = 1;
+    //ReactDOM.render(<SayHello firstName="asdf" lastName={lastname} />, rootElement);
+    ReactDOM.render(<SayHelloAsClass firstName="asdf" lastName={lastname} />, rootElement);
+
+    /*
+    * TO VALIDATE PROPERTIES OF YOUR COMPONENT:
+    * USE propTypes (its a own React library)
+    * --> adds a propType global
+    * --> add propTypes property to your function component --> SayHello.proptTypes
+    * --> or as static property in your class    *
+    * --> gives you warnings in the console, if validation is not correct
+    * */
+
+    //console.log(element)
+</script>
+</body>
+</html>

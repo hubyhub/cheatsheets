@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Beginner's Guide to React</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>-->
+
+<!-- FOR PROPTYPES TO WORK YOU NEED TO RUN DEV-VERSION OF REACT -->
+<script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+<!-- Babel Standalone compiles JSX to HTML -->
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<!-- PROPTYPES IS ITS OWN -->
+<script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+
+<style>
+
+
+
+</style>
+
+<!-- text/babel -->
+<script type="text/babel">
+
+    class Counter extends React.Component {
+        state = { count : 1 }
+
+        // arrow functions () => give us the lexical "this"
+        handleClick = () => {
+            this.setState( {
+                count : this.state.count + 1
+            })
+        }
+
+        // writing above code without arrow function is also possible,
+        // but you would need to write "onClick={this.handleClick.bind(this)}
+        // handleClick() {
+        //     this.setState( {
+        //         count : this.state.count + 1
+        //     })
+        // }
+
+        render() {
+            return <button onClick={this.handleClick}>{this.state.count}</button>
+        }
+
+    }
+
+    const element = <div><Counter /><Counter /></div>;
+    ReactDOM.render(
+        element,
+        document.getElementById('root'),
+    )
+
+</script>
+</body>
+</html>

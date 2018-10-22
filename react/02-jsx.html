@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Beginner's Guide to React</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+<!-- Babel Standalone compiles JSX to HTML -->
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<!-- text/babel -->
+<script type="text/babel">
+    const rootElement = document.getElementById('root');
+
+    const props = {
+      className : 'container',
+      children : 'Hello World'
+    };
+
+    const element = <div {...props} className={'_hi-there'}></div>;
+    // JSX Additional info
+    // * {...props} is similar to "object-spread" in javascript
+    // * className overwrites className from props... because it is after ...props
+    // * you could overwrite children by writing content within <div></div>
+
+
+    // html vs jsx
+    // class --> className
+    // "{}" makes you enter "JAVASCRIPT LAND" within JSX
+    //
+
+    ReactDOM.render(element, rootElement);
+  //  ReactDOM.render(element2, rootElement);
+
+    console.log(element)
+</script>
+</body>
+</html>

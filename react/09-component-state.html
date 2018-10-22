@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>Beginner's Guide to React</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>-->
+
+<!-- FOR PROPTYPES TO WORK YOU NEED TO RUN DEV-VERSION OF REACT -->
+<script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+<!-- Babel Standalone compiles JSX to HTML -->
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<!-- PROPTYPES IS ITS OWN -->
+<script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+
+
+<style>
+    label{
+        font-size:24px;
+        font-family: sans-serif;
+        display:block;
+    }
+
+    .stop-watch {
+        border: 1px solid black;
+        display:block;
+        text-align: center;
+        width:200px;
+        padding:30px;
+        margin: 0 auto;
+    }
+
+    button{
+        height:50px;
+        font-size:24px;
+        width:100%;
+        background:white;
+        border:1px solid #cccccc;
+        margin:10px;
+        color:#333333;
+    }
+
+</style>
+<!-- text/babel -->
+
+<script type="text/babel">
+
+    class StopWatch extends React.Component {
+        state = {
+            lapse : 0,
+            running : false,
+        };
+
+        //NOTICE: THIS IS A MEMBER PROPERTY ON OUR STOPWATCH INSTANCES
+        // call it with this.handleRunClick
+        handleRunClick = () => {
+
+            if(this.state.running) {
+
+                clearInterval(this.timer);
+                this.setState({running : false});
+
+            } else {
+                const startTime = Date.now() - this.state.lapse;
+                this.timer = setInterval(() => {
+                    this.setState({lapse : Date.now() - startTime });
+                });
+                this.setState({lapse:10, running : true});
+            }
+
+        };
+
+        handleClearClick = () => {
+            clearInterval(this.timer);
+            this.setState({lapse:0, running : false});
+        };
+
+        render() {
+            // GET PROPS in  a CLASS LIKE THAT:
+            // const {lapse, running} = this.props;
+
+            const {lapse, running} = this.state;
+            return (
+                <div class="stop-watch">
+                    <label>{lapse}ms</label>
+                    <button onClick={this.handleRunClick} >{running ? 'Stop' : 'Start'}</button>
+                    <button onClick={this.handleClearClick}>Clear</button>
+                </div>
+            );
+        }
+    }
+
+    const rootElement = document.getElementById("root");
+
+
+    // let running = false;
+
+    // this would be the function way to write the Stopwatch Component
+
+    // function StopWatch({running, lapse}) {
+    //     return (
+    //         <div class="stop-watch">
+    //             <label>{lapse}ms</label>
+    //             <button>{running ? 'Start' : 'Stop'}</button>
+    //             <button>Clear</button>
+    //         </div>
+    //     );
+    //
+    // }
+
+
+    function renderApp() {
+
+        ReactDOM.render(
+            //<StopWatch running={true} lapse={0} />
+            <StopWatch />,
+            document.getElementById('root')
+        );
+    }
+
+    renderApp();
+
+    //ReactDOM.render(element, rootElement);
+
+    /*
+    *   styles in JSX
+    *   --> add style-definition as object
+    *       --> properties camelCase
+    *       --> raw int for px values is possible
+    **/
+
+</script>
+</body>
+</html>
