@@ -28,6 +28,7 @@
 	php composer.phar require slim/slim "^3.6"
 	# or just:
 	composer require slim/slim "^3.6"
+	composer require slim/psr7
 	```
 	That will create a **composer.json** in the root folder,<br> 
 	and a **vendor/** folder, and download all the dependencies in that folder<br>
