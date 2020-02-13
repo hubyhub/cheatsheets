@@ -1,8 +1,14 @@
 # Arrays in Javascript
 
+### Find Object with max-value
+```javascript
+var myArray = [{id:'13',height:1 },{id:'55', height: 333}];
+const maxHeight = Math.max(...myArray.map(o => o.height));
+```
+
 ### Find Object by Id
 ```javascript
-myArray = [{'id':'13','foo':'bar'},{'id':'55','foo':'bar'}];
+myArray = [{id:'13',foo:'bar'},{id:'55',foo:'bar'}];
 myArray.find(x => x.id === '13')
 ```
 
