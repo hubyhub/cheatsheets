@@ -2,7 +2,8 @@
 
 ### Find Object by Id
 ```javascript
-myArray.find(x => x.id === '45')
+myArray = [{'id':'13','foo':'bar'},{'id':'55','foo':'bar'}];
+myArray.find(x => x.id === '13')
 ```
 
 ### Erstellen
