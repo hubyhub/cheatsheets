@@ -1,5 +1,10 @@
 # Arrays in Javascript
 
+### Find Object by Id
+```javascript
+myArray.find(x => x.id === '45')
+```
+
 ### Erstellen
 ```javascript
 var arr = []  			// empfohlen
