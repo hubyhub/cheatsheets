@@ -1,5 +1,10 @@
 # Arrays in Javascript
 
+### Delete Object from array
+```javascript
+someArray = someArray.filter(x => x.id !== 'foobar')
+```
+
 ### Find Object with max-value
 ```javascript
 var myArray = [{id:'13',height:1 },{id:'55', height: 333}];
