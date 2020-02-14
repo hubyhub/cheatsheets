@@ -5,7 +5,7 @@
 someArray = someArray.filter(x => x.id !== 'foobar')
 ```
 
-### Find Object with max-value
+### Find max-value
 ```javascript
 var myArray = [{id:'13',height:1 },{id:'55', height: 333}];
 const maxHeight = Math.max(...myArray.map(o => o.height));
