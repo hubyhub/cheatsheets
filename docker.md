@@ -26,7 +26,7 @@ docker run --name cool-name app:1.0   # --name gives your container a nice name,
 
 ### exec
 with exec you can get the terminal of a running container (interactive terminal)
-* you root user, 
+* you are root user
 * you can navigate the virtual file system of the container
 * print environment-variables etc..
 * type "exit" to exit interactive terminal and return 
