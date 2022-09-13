@@ -127,6 +127,8 @@ Scenario:
      var db = client.db('user-account');
      ```
 ## Docker Compose
+* automate running docker containers
+* take all run commands and save it in a structured way in a .yaml file
 
 
 
