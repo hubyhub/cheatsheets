@@ -19,23 +19,47 @@ docker run -d     # detached mode, if console closes container still runs
 docker run -d -p6000:6794 	# p defines portnumber of host-machine and port of container (hostmachine-port can be used only once)
 docker ps                   # shows you which containers are currently running (and on which port)
 docker ps -a                # shows you all containers, also the stopped ones
-docker images               # gives you all images you have locally 
-docker logs containerId     # gives you the logs of the container				
-docker run --name cool-name app:1.0   # --name gives your container a nice name, so you can reference it easier 
+docker images               # shows you all images, you have locally. 
+docker logs containerId     # shows you the logs of the container. (you get the containerId by via docker ps)
+docker run --name cool-name app:1.0   # gives your container a nice name, so you can reference it easier without containerId
+docker exec -it containerId /bin/bash # gives you the terminal within the container, for debugging, etc...
 ```
 
-### exec
-with exec you can get the terminal of a running container (interactive terminal)
-* you are root user
+### exec -it
+* gives you the terminal of a running container 
+* it is a bit "limited" linux terminal (e.g.: no curl)
+* -it stands for **interactive terminal
+* you are logged in as root user
 * you can navigate the virtual file system of the container
 * print environment-variables etc..
-* type "exit" to exit interactive terminal and return 
-* it is a bit limited linux terminal (e.g.: no curl)
-#### Example
-```bash
-docker exec -it containerId /bin/bash  
-```
-#### full example 
+* type "exit" if you want to exit interactive terminal
+
+### Review docker run vs docker start
+**docker run**: will take an image with a specific version, or the latest. So you are working with images. and it will create a new container
+docker start on the other side, you are working with a container. It allows you to restart a stopped container. 
+
+### full example 
 ```
 docker run -d -p6001:6379 --name my-cool-name app:1.0
 ```
+
+## Workflow with Docker
+How is Docker used in practice? In Software development you usually have following steps:
+* Development
+* Continuous Integration/ Delivery
+* Deployment
+
+The question is, how does Docker integrate in all those steps?
+Scenario: 
+* You are developing a Javascript Applicaiton, which uses MongoDB.
+* And instead of installing it locally on your laptop, you download a docker container from Docker Hub.
+* You connect your Javascript Application with MongoDB and you start developing.
+* You commit your changes to git, so that another one can test the application.
+* That will trigger a CI (a jenkins-build,...) 
+  1. which will build the application and create artifacts from the application.
+  2. and then will create a Docker Image from that Artifact
+  3. the created image is then pushed to a (private) Docker Repository
+  4. A DevServer pulls both images. official Mongoimage from DockerHub & AppImage from private Docker Repo
+  5. The Containers can talk to each other and are configured and can be tested
+
+
