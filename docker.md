@@ -18,7 +18,7 @@ docker stop       # stops container
 docker run -d     # detached mode, if console closes container still runs
 docker run -d -p6000:6794 	# p defines portnumber of host-machine and port of container (hostmachine-port can be used only once)
 docker ps                   # shows you which containers are currently running (and on which port)
-docker ps -a                # shows you the history (also the stopped containers)
+docker ps -a                # shows you all containers, also the stopped ones
 docker images               # gives you all images you have locally 
 docker logs containerId     # gives you the logs of the container				
 docker run --name cool-name app:1.0   # --name gives your container a nice name, so you can reference it easier 
