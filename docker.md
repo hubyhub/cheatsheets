@@ -96,7 +96,36 @@ Scenario:
   # check for "waiting for connections on port 27017"
   docker logs containerId
   ```
-
+* start mongo-express and connect it to running mongo-db on startup
+  ```bash
+  docker run
+  -p 8081:8081                                  # host & container port
+  -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin      # username for mongodb        
+  -e ME_CONFIG_MONGODB_ADMINPASSOWRD=password   # password for mongodb
+  -e ME_CONFIG_MONGODB_SERVER=mongodb           # the CONTAINER-NAME of mongodb-container
+  --net mongo-network                           # docker-network name
+  --name mongo-express                          # gives the container a name 
+  mongo-express
+  ```
+* again log the container and lets have a look whats running in it:
+  ```bash
+  # should seay something like: 
+  # "mongo express server llstening on htt://0.0.0.0:8081"
+  # which can be opened in the browser localhost:8081
+  docker logs containerId
+  docker logs containerId | tail # display just last part of logs
+  docker logs containerId -f     # stream the logs periodically
+  ```
+* create new mongodb- database via GUI in browser on localhost:8081 
+  * by specifying a environment variable **init_DB** we could create a init database when starting the container
+* Connect Node Server with MongoDB Container
+  * check mongodb and mongo-express running `docker ps`
+  * at PORTS you can see where mongo-db is listening in your code change it accordingly so something like:
+     ```bash
+     # username and password would not be hardcoded
+     MongoClient.connect('mongodb://admin:password@localhost:27017');
+     var db = client.db('user-account');
+     ```
 
 
 
