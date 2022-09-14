@@ -137,7 +137,7 @@ Scenario:
 * **network-configuration** is not in docker-compose (--net mongo-network). Docker Compose takes care of creating a common Network!
 * **Indentation in yaml-Files is important!**
 
-
+```
 | docker run command                          | mongo-docker-compose.yaml                     |
 |---------------------------------------------|-----------------------------------------------|
 |                                             | version: '3'                                  |   
@@ -157,7 +157,7 @@ Scenario:
 |                                             |        -ME_CONFIG_MONGODB_ADMINUSERNAME=admin |
 |                                             |        -ME_CONFIG_MONGODB_ADMINPASSWORD=pwd   |
 |                                             |        -ME_CONFIG_MONGODB_SERVER=mongodb      |
-
+```
 
 
 
