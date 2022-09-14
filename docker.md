@@ -12,7 +12,7 @@ A Pull downloads actually multiple image-layers (if version changes of one layer
 
 ## Commands
 ```
-docker pull imageName				# pulls image from repo to local environment
+docker pull imageName       # pulls image from repo to local environment
 docker run                  # combines docker pull & docker start (pulls image first, if it is not locally available)
 docker start                # re-start stopped container
 docker stop                 # stops container
