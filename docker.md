@@ -169,4 +169,25 @@ docker-compose -f mongo.yaml up
 docker-compose -f mongo.yaml down
 ```
 
+## Create your own Docker image with Dockerfile
+* we wnat to package our javascript-App into our own Docker-Container
+* Jenkins needs to build javascript Application first and then it will create the docker image from the content (artifact)
+
+## Dockerfile = Blueprint for building images
+* first line of every Dockerfile is `FROM imageName`
+* whatever image you are creating, you always want to base it on another image
+* in our case we need **node.js** image for our container
+* instead of lower-level alpine image we can use a ready to use node-image from docker-hub
+* **FROM** 
+* **ENV** - you can also define environment variables here. is an alternative to docker-compose
+* **RUN** - execute any Linux command, this is executed INSIDE the container!!
+* **COPY** - executes on the HOST machine!!
+* **CMD** - is an **entrypoint command**, you can have only one CMD, but multiple RUN commands
+```
+FROM node                 # users node-image
+ENV MONGO_DB_USERNAME=admin
+RUN mkdir -p/home/app    # this folder will be created in the container and not on the host/notbook
+COPY . /home/app         # copy current folder files from HOST-MACHINE TO INSIDE THE IMAGE /home/app
+CMD["node", "server.js"] # start the app with "node server.js"
+```
 
