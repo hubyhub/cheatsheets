@@ -163,9 +163,10 @@ Now you can start containers using docker-compose file
 
 ```bash
 # -f which file should run
-# up at the end you define WHAT you want to do. up says start all containers defined in the yaml
+# up: starts all containers
+# down: stops all containers and removes all networks
 docker-compose -f mongo.yaml up
-
+docker-compose -f mongo.yaml down
 ```
 
 
