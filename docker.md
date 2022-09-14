@@ -159,5 +159,13 @@ Scenario:
 |                                             |        -ME_CONFIG_MONGODB_SERVER=mongodb      |
 ```
 
+Now you can start containers using docker-compose file
+
+```bash
+# -f which file should run
+# up at the end you define WHAT you want to do. up says start all containers defined in the yaml
+docker-compose -f mongo.yaml up
+
+```
 
 
