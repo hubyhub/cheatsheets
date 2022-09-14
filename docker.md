@@ -17,7 +17,7 @@ docker run                  # combines docker pull & docker start (pulls image f
 docker start                # re-start stopped container
 docker stop                 # stops container
 docker run -d               # detached mode, if console closes container still runs
-docker run -d -p6000:6794 	# p defines portnumber of host-machine and port of container (hostmachine-port can be used only once)
+docker run -d -p6000:6794   # p defines portnumber of host-machine and port of container (hostmachine-port can be used only once)
 docker ps                   # shows you which containers are currently running (and on which port)
 docker ps -a                # shows you all containers, also the stopped ones
 docker images               # shows you all images, you have locally. 
