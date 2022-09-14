@@ -136,6 +136,9 @@ Scenario:
 * **image:** imageName. We need to know from which image the container will be built from, you can also add a tag, if you want to have a specific version
 * **network-configuration** is not in docker-compose (--net mongo-network). Docker Compose takes care of creating a common Network!
 * **Indentation in yaml-Files is important!**
+* if 2 containers depend on each other you could define a "waiting logic"
+* when you restart a container, everything that you stored there, is gone. it is not persistent
+* of course you want to persist data even when container stops, for that you need --> DOCKER VOLUMES
 
 ```
 | docker run command                          | mongo-docker-compose.yaml                     |
