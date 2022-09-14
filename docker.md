@@ -11,11 +11,12 @@ A Pull downloads actually multiple image-layers (if version changes of one layer
 
 
 ## Commands
-```docker pull imageName				# pulls image from repo to local environment
-docker run        # combines docker pull & docker start (pulls image first, if it is not locally available)
-docker start      # re-start stopped container
-docker stop       # stops container
-docker run -d     # detached mode, if console closes container still runs
+```
+docker pull imageName				# pulls image from repo to local environment
+docker run                  # combines docker pull & docker start (pulls image first, if it is not locally available)
+docker start                # re-start stopped container
+docker stop                 # stops container
+docker run -d               # detached mode, if console closes container still runs
 docker run -d -p6000:6794 	# p defines portnumber of host-machine and port of container (hostmachine-port can be used only once)
 docker ps                   # shows you which containers are currently running (and on which port)
 docker ps -a                # shows you all containers, also the stopped ones
@@ -72,7 +73,7 @@ Scenario:
   5. The Containers can talk to each other and are configured and can be tested
 
 ### Steps:
-* go to docker hub and search and downloadfor mongo-db and mongo express
+* go to docker hub and search and download for mongo-db and mongo express
   ```bash
   docker pull mongo
   docker pull mongo-express
@@ -127,8 +128,8 @@ Scenario:
      var db = client.db('user-account');
      ```
 ## Docker Compose
-* automate running docker containers
-* take all run commands and save it in a structured way in a .yaml file
+* automates running docker containers
+* takes your run commands from the terminal and converts its in a structured document and save it as .yaml file
 
 
 
