@@ -23,8 +23,9 @@ docker ps -a                # shows you all containers, also the stopped ones
 docker images               # shows you all images, you have locally. 
 docker logs containerId     # shows you the logs of the container. (you get the containerId by via docker ps)
 docker run --name cool-name app:1.0   # gives your container a nice name, so you can reference it easier without containerId
-docker exec -it containerId /bin/bash # gives you the terminal within the container, for debugging, etc...
+docker exec -it containerId /bin/bash # gives you the terminal within the container, for debugging, checking env-variables
 docker exec -it containerId /bin/sh   # some containers don't have bash installed
+env                                   # check environment variables, usefull to test if docker-file sets them correctly
 docker network ls                     # shows docker networks, which is used by the containers to talk to each other
 docker network create manfred-network # creates a new docker network
 
