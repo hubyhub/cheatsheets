@@ -211,3 +211,16 @@ Then the image is built, and an ID is created.
 **Workflow in jenkins:** 
  * we have to commit the docker-file with our code and jenkins will create the image
  * we have to share the created image in a docker repository
+
+## Create a private repository for Docker Images (=Docker Registry)
+options: 
+* AWS -> Amazon ECR (=Elastic Container Registry) there you have 1 repository per image, but u store different tags(versions) of the same image
+* Nexus
+* Digital Ocean
+
+```
+# usually you have to login with docker
+docker login
+# but aws gives you a command line tool do login and push to aws
+$(aws ecr get-login....)
+```
