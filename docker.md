@@ -254,3 +254,6 @@ services:
 volumes: # here you list all volumes you want to mount into containers
   db-data
 ```
+
+## Kubernetes
+* if you want to deploy and work with hundreds of containers, which need to be deployed on distributed servers
