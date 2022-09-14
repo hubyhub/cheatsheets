@@ -242,11 +242,15 @@ $(aws ecr get-login....)
     * you don't have to know the path to a host-folder
     * `docker run -v name:/var/lib/mysql/data`    
   * in docker-compose you define volumes
+  * you can mount the same host-folder into multiple containers so they can share it
+  * 
 ```
 version: '3'
 services: 
   mongodb: 
     image: mongo
     volumes: 
-      -db-data:/var7lib/mysql/data
+      -db-data:/var7lib/mysql/data # named volume
+volumes: # here you list all volumes you want to mount into containers
+  db-data
 ```
