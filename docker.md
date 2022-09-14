@@ -127,9 +127,18 @@ Scenario:
      MongoClient.connect('mongodb://admin:password@localhost:27017');
      var db = client.db('user-account');
      ```
-## Docker Compose
+## Docker Compose (mongo-docker-compose.yaml)
 * automates running docker containers
 * takes your run commands from the terminal and converts its in a structured document and save it as .yaml file
+| docker run command                          | mongo-docker-compose.yaml |
+|---------------------------------------------|---------------------------|
+| docker run -d\                              |                           |   
+|  --name mongodb\                            |                           |
+|  -p 27017:27017\                            |                           |
+|  -e MONGO-INITDB_ROOT_USERNAME=admin\       |                           |
+|  -e MONGO-INITDB_ROOT_PASSWORD=password\    |                           |
+|  --net mongo-network\                       |                           |
+|  monog                                      |                           |
 
 
 
