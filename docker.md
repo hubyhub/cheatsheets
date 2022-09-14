@@ -24,8 +24,12 @@ docker images               # shows you all images, you have locally.
 docker logs containerId     # shows you the logs of the container. (you get the containerId by via docker ps)
 docker run --name cool-name app:1.0   # gives your container a nice name, so you can reference it easier without containerId
 docker exec -it containerId /bin/bash # gives you the terminal within the container, for debugging, etc...
+docker exec -it containerId /bin/sh   # some containers don't have bash installed
 docker network ls                     # shows docker networks, which is used by the containers to talk to each other
 docker network create manfred-network # creates a new docker network
+
+docker rm containerId       # deletes a container
+docker rmi imageId          # deletes an image, you first have to delete the image, even when it is stopped
 
 # full example
 docker run -d -p6001:6379 --name my-cool-name app:1.0 
@@ -178,6 +182,7 @@ docker-compose -f mongo.yaml down
 * whatever image you are creating, you always want to base it on another image
 * in our case we need **node.js** image for our container
 * instead of lower-level alpine image we can use a ready to use node-image from docker-hub
+* whenever you adjust a docker-file you have to rebuld the image
 * **FROM** 
 * **ENV** - you can also define environment variables here. is an alternative to docker-compose
 * **RUN** - execute any Linux command, this is executed INSIDE the container!!
@@ -188,6 +193,20 @@ FROM node                 # users node-image
 ENV MONGO_DB_USERNAME=admin
 RUN mkdir -p/home/app    # this folder will be created in the container and not on the host/notbook
 COPY . /home/app         # copy current folder files from HOST-MACHINE TO INSIDE THE IMAGE /home/app
-CMD["node", "server.js"] # start the app with "node server.js"
+CMD["node", "/home/app/server.js"] # start the app with "node /home/app/server.js"
 ```
 
+
+### How to build an image from a Docker file
+We have to use `docker build` and provide 2 parameters:
+* a name & tag: name your app as you which and provide a tag. can also be anything usually version
+* location of docker-file. in our case it is in same directory. therefore "."
+
+```bash
+docker build -t my-app:1.0 .
+```
+
+Then the image is built, and an ID is created.
+**Workflow in jenkins:** 
+ * we have to commit the docker-file with our code and jenkins will create the image
+ * we have to share the created image in a docker repository
