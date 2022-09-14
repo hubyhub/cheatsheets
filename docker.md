@@ -130,10 +130,7 @@ Scenario:
 ## Docker Compose (mongo-docker-compose.yaml)
 * automates running docker containers
 * takes your run commands from the terminal and converts its in a structured document and save it as .yaml file
-* version: version of docker-compose
-* services: this is where container list goes
-* **mongodb:** = container name
-* **image:** imageName. We need to know from which image the container will be built from, you can also add a tag, if you want to have a specific version
+* **image:**  We need to know from which image the container will be built from, you can also add a tag, if you want to have a specific version
 * **network-configuration** is not in docker-compose (--net mongo-network). Docker Compose takes care of creating a common Network!
 * **Indentation in yaml-Files is important!**
 * if 2 containers depend on each other you could define a "waiting logic"
@@ -143,10 +140,10 @@ Scenario:
 ```
 | docker run command                          | mongo-docker-compose.yaml                     |
 |---------------------------------------------|-----------------------------------------------|
-|                                             | version: '3'                                  |   
-|    docker run -d\                           | services:                                     |   
-|     --name mongodb\                         |    mongodb:                                   |   
-|     -p 27017:27017\                         |      image:  mongo                            |   
+|                                             | version: '3'     # version of docker-compose  |   
+|    docker run -d\                           | services:        # list of containers go here |   
+|     --name mongodb\                         |    mongodb:      # container name             |   
+|     -p 27017:27017\                         |      image:  mongo    # image name            |   
 |     -e MONGO-INITDB_ROOT_USERNAME=admin\    |      ports:                                   |
 |     -e MONGO-INITDB_ROOT_PASSWORD=password\ |       -27017:27017                            |
 |     --net mongo-network\                    |      environment:                             |
