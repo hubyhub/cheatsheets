@@ -130,16 +130,33 @@ Scenario:
 ## Docker Compose (mongo-docker-compose.yaml)
 * automates running docker containers
 * takes your run commands from the terminal and converts its in a structured document and save it as .yaml file
+* version: version of docker-compose
+* services: this is where container list goes
+* **mongodb:** = container name
+* **image:** imageName. We need to know from which image the container will be built from, you can also add a tag, if you want to have a specific version
+* **network-configuration** is not in docker-compose (--net mongo-network). Docker Compose takes care of creating a common Network!
+* **Indentation in yaml-Files is important!**
 
-| docker run command                          | mongo-docker-compose.yaml |
-|---------------------------------------------|---------------------------|
-| docker run -d\                              |                           |   
-|  --name mongodb\                            |                           |
-|  -p 27017:27017\                            |                           |
-|  -e MONGO-INITDB_ROOT_USERNAME=admin\       |                           |
-|  -e MONGO-INITDB_ROOT_PASSWORD=password\    |                           |
-|  --net mongo-network\                       |                           |
-|  monog                                      |                           |
+
+| docker run command                          | mongo-docker-compose.yaml                     |
+|---------------------------------------------|-----------------------------------------------|
+|                                             | version: '3'                                  |   
+|    docker run -d\                           | services:                                     |   
+|     --name mongodb\                         |    mongodb:                                   |   
+|     -p 27017:27017\                         |      image:  mongo                            |   
+|     -e MONGO-INITDB_ROOT_USERNAME=admin\    |      ports:                                   |
+|     -e MONGO-INITDB_ROOT_PASSWORD=password\ |       -27017:27017                            |
+|     --net mongo-network\                    |      environment:                             |
+|     mongo                                   |       -MONGO_INITDB_ROOT_USERNAME=admin       |
+|                                             |       -MONGO_INITDB_ROOT_PASSWORD=password    |
+|                                             |    mongo-express:                             |
+|                                             |       image: mongo-express                    |
+|                                             |       ports:                                  |
+|                                             |        -8080:8080                             |
+|                                             |       environment:                            |
+|                                             |        -ME_CONFIG_MONGODB_ADMINUSERNAME=admin |
+|                                             |        -ME_CONFIG_MONGODB_ADMINPASSWORD=pwd   |
+|                                             |        -ME_CONFIG_MONGODB_SERVER=mongodb      |
 
 
 
