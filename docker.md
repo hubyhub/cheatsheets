@@ -224,3 +224,29 @@ docker login
 # but aws gives you a command line tool do login and push to aws
 $(aws ecr get-login....)
 ```
+
+## Docker Volumes for persisting Data
+* a directory of the host machine is mounted in the container
+* 3 Types of Docker Volumes
+  * Host volumes
+    * `-v hostFolder:containerFolder` 
+    * `docker run -v /home/mount/data:/var/lib/mysql/data`
+    * you decide which folder of the **host file system ** you want to mount into the container
+  * Anonymous Volumes
+    * you just reference the container-directory without the host folder   
+    * `-v /containerFolder`       
+    * `docker run `-v /var/lib/mysql/data`
+    * docker will create the folder automatically
+  * Named Volumes (recommended & mostly used)
+    * you specify the 'name' of the volume
+    * you don't have to know the path to a host-folder
+    * `docker run -v name:/var/lib/mysql/data`    
+  * in docker-compose you define volumes
+```
+version: '3'
+services: 
+  mongodb: 
+    image: mongo
+    volumes: 
+      -db-data:/var7lib/mysql/data
+```
