@@ -1,3 +1,18 @@
+
+Authentication with Tokens 
+==========================
+Goto: [github.com/settings/tokens](https://github.com/settings/tokens)
+``` bash
+# also if existing token has expired
+git remote remove origin
+git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git
+
+#example
+git remote add origin https://123456789@github.com/hubyhub/businessmodelcanvas.io.git
+
+```
+
+
 ```bash
 git clone /path/to/repository			# creates a local copy
 git clone https://github.com/repopath	# creates a local copy from github repository
