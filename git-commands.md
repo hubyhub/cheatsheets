@@ -12,6 +12,8 @@ git remote add origin https://123456789@github.com/hubyhub/businessmodelcanvas.i
 
 ```
 
+BASICS 
+==========================
 
 ```bash
 git clone /path/to/repository			# creates a local copy
