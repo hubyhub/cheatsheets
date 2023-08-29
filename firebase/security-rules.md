@@ -52,6 +52,43 @@ there are 2 types of Wildcards:
   }
   ```
 
+### How to allow or block request
+You need to set a boolean value for each action
+
+* get: when a user requests a specific document
+* list: when a user runs a query that might return this document
+* create: when a user creates a new document
+* delete: delete a document
+* update: updating an existing document
+
+* get & list can be comined into a single action: **read**
+* create delete and update  can be comined into a single action: **write**
+
+#### Example
+```javascript
+// everyone can read documents in publicDoc
+service cloud.firestore {  
+  match /databases/{database}/documents {  
+    match /publicDocs/{docId} {
+      // or allow read: if true;
+      allow read; 
+    }
+  }
+}
+```
+
+```javascript
+// readonly documents, no-one should be able to modify
+service cloud.firestore {  
+  match /databases/{database}/documents {  
+    match /publicDocs/{docId} {     
+      allow write: if false; 
+    }
+  }
+}
+```
+
+
    
 
 
