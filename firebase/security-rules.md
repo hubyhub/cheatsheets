@@ -146,14 +146,13 @@ Following data be used to evaluate the request:
 
 1) "request.resource"-object is the data that you are trying to write
 2) "resource" object represents the data that is already in database
-3) "resource.data" the data property can be used to access any of the fields within this document
-  * arbitrary documents in the database
-  * typically you are going to use
-    * the `exists()` function, to check whether the documents exist, or
-    * the `get()` function, which will return an object which looks very similar to the resource obect, with a .data property
-  * **Use Case:** Store a list of users which have access to a specific document within the app
-    * editor, admin, superadmin,... while this would work, there is another approach
-    * other approach: Auth CLAIMS
+3) "resource.data" the data property can be used to access any of the fields within this document  
+    * typically you are going to use
+      * the `exists()` function, to check whether the documents exist, or
+      * the `get()` function, which will return an object which looks very similar to the resource obect, with a .data property
+    * **Use Case:** Store a list of users which have access to a specific document within the app
+      * editor, admin, superadmin,... while this would work, there is another approach
+      * other approach: Auth CLAIMS
 
 ```javascript
 
