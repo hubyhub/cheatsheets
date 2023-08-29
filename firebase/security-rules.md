@@ -31,5 +31,28 @@ service cloud.firestore {
 there are 2 types of Wildcards:
 * {database} = matches all databases and stores it in variable called "database"
 * {wildcard=**} = "rest-of-the-document-wildcard", match the rest of the path and store it in variable 
-  example match /users/{restOfPath=**} {} matches every document in 'users'-collection,and also every document in every subcollection 
-  the value changes and is the rest of the document path
+  * example match /users/{restOfPath=**} {} matches every document in 'users'-collection,and also every document in every subcollection 
+  * the value changes and is the rest of the document path
+
+#### Usecases for recursive wildcards:
+* make database temporarily completely open
+  ```
+  match /databases/{database}/documents {    
+      match /{document=**} {
+        allow read, write;
+      }
+    }
+  ```
+* when you want to cover a document and all its subcollections by the same rules
+  ```
+  match /databases/{database}/documents {    
+      match /users/{restOfPath=**} {
+        allow read;
+      }
+  }
+  ```
+
+   
+
+
+  
