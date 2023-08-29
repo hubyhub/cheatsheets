@@ -194,8 +194,40 @@ service cloud.firestore {
   }
 }
 
-
 ```
+
+### Custom Security Roles
+You might write a server call like this:
+```
+admin.auth().setCustomUserClaims(uid, {super_admin: true})
+```
+That makes you a superadmin
+and a security rules at the top of the document that allows superadmins to read and write anything
+```
+service cloud.firestore {  
+  match /databases/{database}/documents {
+    match /everythingInMyDatabase=**) {
+      allow read, write: if request.auth.token.super_admin == true; 
+    }
+  }
+}
+
+Disadvantages of CUSTOM AUTH CLAIMS:
+  * user need to refresh access token, when they get new permissions (sign out, sign-in, or wait 1 hour)
+  * there is a limit to how many of these custom auth claims you can make
+  * you need some server code or cloud function to write them
+
+Advantages:
+  * useful for app-level permissions without you rneeding to write a bunch of redundant code
+
+Thats why the more APP-Level approach might be more useful. (with get-approach)
+
+
+#### Custom Rule Functions
+
+
+
+
 
 
 
