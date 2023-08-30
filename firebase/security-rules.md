@@ -1,7 +1,10 @@
 # Security Rules
 
 https://www.youtube.com/watch?v=eW5MdE3ZcAw&ab_channel=Firebase
+
 https://firebase.google.com/docs/firestore/security/get-started
+
+https://firebase.google.com/docs/rules/basics
 
 #### rules_version = '2';
 As of May 2019, version 2 of the Cloud Firestore security rules is now available.
