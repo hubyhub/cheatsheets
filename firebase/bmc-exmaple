@@ -1,6 +1,7 @@
 # BMC Example
 
 BMC-Collection
+
 ```JSON
 {
 "title": "My cool business idea",
@@ -22,9 +23,6 @@ BMC-Collection
      "created_date": "date?"     
    }
  }
-
-
-
 }
 
 ```
