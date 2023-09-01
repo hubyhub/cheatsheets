@@ -4,3 +4,4 @@
 * size of Documents <1MB
 * not more than 20.000 fields
 * you cannot get partial documents
+  * if you want to keep parts of the document secret you have to put them into a separate document
