@@ -34,3 +34,16 @@ characters (sub-collection)
  "occupation": "Socialite"
 }
 ```
+
+Example with Map Field (json)
+dickens_books collectaion
+```json
+{
+ "title": "Greate Expectation",
+"chararctars": {
+ "name": "Pips",
+ "occupation": "Apprentice"
+}
+}
+
+
