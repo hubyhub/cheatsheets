@@ -50,6 +50,7 @@ BMC-Collection
 #### Role management
 [https://youtu.be/haMOUb3KVSo?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&t=520](https://youtu.be/haMOUb3KVSo?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&t=520)
 Who has access?
+you definitly want to have some kind of access control list
 Who can view? who can write?
 
 IN a subcollection PRIVATE DATA
