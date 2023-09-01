@@ -9,3 +9,21 @@
  * queries find documents from a single collection
  * queries are shallow, the sub-collection is not returned
   * a separate query is needed 
+
+Example subcollection
+
+dickens_books collectaion
+```json
+ title: "Greate Expectation"
+```
+
+characters (sub-collection)
+```json
+ name: "Pips",
+ occupation: "Apprentice"
+```
+
+```json
+ name: "Estella",
+ occupation: "Socialite"
+```
