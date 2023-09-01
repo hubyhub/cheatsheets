@@ -14,16 +14,23 @@ Example subcollection
 
 dickens_books collectaion
 ```json
+{
  title: "Greate Expectation"
+}
+
 ```
 
 characters (sub-collection)
 ```json
- name: "Pips",
+ {
+name: "Pips",
  occupation: "Apprentice"
+}
 ```
 
 ```json
- name: "Estella",
+ {
+name: "Estella",
  occupation: "Socialite"
+}
 ```
