@@ -8,7 +8,8 @@
  * you are billed by the number of reads and writes per document
  * queries find documents from a single collection
  * queries are shallow, the sub-collection is not returned
-  * a separate query is needed 
+  * a separate query is needed
+ * Arrays are weird
 
 *#### Depending on the Datastructure, firestore lets you run very different kind of queries:
 
@@ -31,24 +32,25 @@ title: "Greate Expectations"
  "occupation": "Socialite"
 }
 
-// query might look like
+ Possible queries might look like
+
+```
+// show me every character in the book "Oliver twist" that is a "doctor" or
+// show me every character in the book "great expectations" that starts with a P
 collection("dickens_books/great_exp//charactars")
 .where(name > "P"I
 .where(name < "Q)"
 
-// show me every character in the book "great expectations" that starts with a P
-// show me every character in the book "Oliver twist" that is a "doctor"
 
 // Collection Group
 // for a query like "show me all charactars in all books named "Oliver" we could use collectionGroup query
+// You need to setup a CollectionGroup Index for the name field in Firestore console (max 200 groups)
 collectionGroup("characters")
  .where("name", "==", "Oliver")
 
-
-
 ```
 
-Example with Map Field (json)
+#### Example with Map Field (json)
 ```json
 // dickens_books collectaion
 {
@@ -60,4 +62,17 @@ Example with Map Field (json)
  }
 }
 ```
+
+Possible queries might look like
+```
+// a bit weird
+collection("dickens_books/great_exp//charactars")
+.where("characters.Pip", ">=" "")
+```
+
+Third option is to put the characters in  a top level collection 
+
+* if you are searching  for individual records from a group of data you should put them into a collection
+
+
 
