@@ -11,7 +11,7 @@ Firestore is a "horizontally scaling" nosql document database in the cloud
 
 ### noSQL 
 * no tables
-* based on plain old key value, collection of json, or tree
+* usuaylly they are based on key value, collection of json, or tree,...
 * all usually are schema-less. 
   * thaat means there are no database restrictions about what data you can put in
 * no sql: 
