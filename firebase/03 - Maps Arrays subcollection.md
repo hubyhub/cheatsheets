@@ -5,3 +5,4 @@
 * not more than 20.000 fields
 * you cannot get partial documents
   * if you want to keep parts of the document secret you have to put them into a separate document
+ * you are billed by the number of reads and writes per document
