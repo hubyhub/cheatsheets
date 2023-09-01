@@ -15,7 +15,7 @@ Example subcollection
 dickens_books collectaion
 ```json
 {
- title: "Greate Expectation"
+ "title": "Greate Expectation"
 }
 
 ```
