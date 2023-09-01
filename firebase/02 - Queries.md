@@ -38,6 +38,9 @@ NoSQL philosophy prioritze reads over writes
 * 2 ways to create them:
   * manually goto firebase console
   * trough a query that throws error because composite index does not exist. shows url to firebase console you follow it and click "create"
+ * when you want to do a "greater than" & "less_than" query
+ * can also be used to order results
+  
 
 
   
