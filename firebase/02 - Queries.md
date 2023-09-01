@@ -1,11 +1,13 @@
 # Queries
-Queries can only be run to retrieve data from 1 collection/subcollection
+
 
 NoSQL philosophy prioritze reads over writes
 
 ### Collection Group Query (new since 2019)
-* a query that spans multiple collections, is now supported
-* in firebase console you need to set this up. 
+* Usually Queries can only be run to retrieve data from 1 collection/subcollection
+* now there is a way to do that: "Collection Group Query"
+* is a query that spans multiple collections
+* you can create those in the "firebase console" 
 * EXAMPLE. RATINGS collection and REVIEW COLLECTION. firebase will index them as one giant collection
 * Attention:
   * limited to 200 collection group queries
