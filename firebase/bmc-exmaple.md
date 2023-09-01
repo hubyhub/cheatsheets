@@ -46,3 +46,17 @@ BMC-Collection
 }
 
 ```
+
+#### Role management
+[https://youtu.be/haMOUb3KVSo?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&t=520](https://youtu.be/haMOUb3KVSo?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&t=520)
+
+IN a subcollection PRIVATE DATA
+```JSON
+{
+"roles":{
+ "userId1": "Editor",
+ "userId2": "Viewer"
+}
+}
+```
+
