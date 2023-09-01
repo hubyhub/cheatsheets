@@ -1,0 +1,18 @@
+# Queries
+Queries can only be run to retrieve data from 1 collection/subcollection
+
+### Collection Group Query (new since 2019)
+* a query that spans multiple collections, is now supported
+* in firebase console you need to set this up. 
+* EXAMPLE. RATINGS collection and REVIEW COLLECTION. firebase will index them as one giant collection
+* Attention:
+  * limited to 200 collection group queries
+  * these queries look for collections of the same name regardless where they appear in the database
+     * collection "reviews" should be used only once --> "support-team-reviews" "restaurant-reviews"
+
+### how to query
+* there are no joins like in sql
+  * no joins from one collection to grab data from another collection
+  * example no:  "fetch me data from users collection  for users that have written "reviews" from e a specific "restaurant"
+* queries that you run should be based on a quality, or a greater or less comparison of 1 or more fields in the document
+  * "find me all restaurants from collection where field city == "san francisco"
