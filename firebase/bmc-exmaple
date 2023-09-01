@@ -1,0 +1,30 @@
+# BMC Example
+
+BMC-Collection
+```JSON
+{
+"title": "My cool business idea",
+ "customer_segments": {
+   "post_1": {
+     "title": "sporty man in their 30s",
+     "text": "Men that want do do some sport, often, lorem ipsum",
+     "ai-generated": true,
+     "edited": "true",
+     "created_by": "username",
+     "created_date": "date?"     
+   },
+   "post_2": {
+     "title": "Family Fathers",
+     "text": "Men that want do do some sport, often, lorem ipsum",
+     "ai-generated": true,
+     "edited": "true",
+     "created_by": "username",
+     "created_date": "date?"     
+   }
+ }
+
+
+
+}
+
+```
