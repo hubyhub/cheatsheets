@@ -7,3 +7,5 @@
   * if you want to keep parts of the document secret you have to put them into a separate document
  * you are billed by the number of reads and writes per document
  * queries find documents from a single collection
+ * queries are shallow, the sub-collection is not returned
+  * a separate query is needed 
