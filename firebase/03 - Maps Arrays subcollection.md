@@ -3,3 +3,4 @@
 ### Rules
 * size of Documents <1MB
 * not more than 20.000 fields
+* you cannot get partial documents
