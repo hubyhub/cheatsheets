@@ -24,13 +24,13 @@ characters (sub-collection)
 ```json
  {
 name: "Pips",
- occupation: "Apprentice"
+ "occupation": "Apprentice"
 }
 ```
 
 ```json
  {
 name: "Estella",
- occupation: "Socialite"
+ "occupation": "Socialite"
 }
 ```
