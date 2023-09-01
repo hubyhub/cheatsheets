@@ -22,6 +22,26 @@ BMC-Collection
      "created_by": "username",
      "created_date": "date?"     
    }
+ },
+"value_propositions": {
+   "post_1": {
+     "linked_customer_segment": "id"
+     "title": "more time",
+     "text": "Men gets more time",
+     "ai-generated": true,
+     "edited": "true",
+     "created_by": "username",
+     "created_date": "date?"     
+   },
+   "post_2": {
+     "linked_customer_segment": "id2"
+     "title": "better health",
+     "text": "no more rattm",
+     "ai-generated": true,
+     "edited": "true",
+     "created_by": "username",
+     "created_date": "date?"     
+   }
  }
 }
 
