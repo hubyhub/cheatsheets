@@ -10,39 +10,53 @@
  * queries are shallow, the sub-collection is not returned
   * a separate query is needed 
 
-Example subcollection
+*#### Depending on the Datastructure, firestore lets you run very different kind of queries:
 
-dickens_books collectaion
-```json
-{
- "title": "Greate Expectation"
-}
-
+Example with subcollection
 ```
+// dickens_books collectaion
+title: "Greate Expectations"
 
-characters (sub-collection)
-```json
+// characters (stored in sub-collection)
  {
+ name: "Pips",
+ occupation: "Apprentice"
+ }
+{
  "name": "Pips",
  "occupation": "Apprentice"
 }
-```
-
-```json
- {
+{
 "name": "Estella",
  "occupation": "Socialite"
 }
+
+// query might look like
+collection("dickens_books/great_exp//charactars")
+.where(name > "P"I
+.where(name < "Q)"
+
+// show me every character in the book "great expectations" that starts with a P
+// show me every character in the book "Oliver twist" that is a "doctor"
+
+// Collection Group
+// for a query like "show me all charactars in all books named "Oliver" we could use collectionGroup query
+collectionGroup("characters")
+ .where("name", "==", "Oliver")
+
+
+
 ```
 
 Example with Map Field (json)
-dickens_books collectaion
 ```json
+// dickens_books collectaion
 {
  "title": "Greate Expectation",
  "chararctars": {
-  "name": "Pips",
-  "occupation": "Apprentice"
+  "Pip: "Aprentice",
+  "Estella ": "Socialite",
+  "Miss havisham": "Hairess"
  }
 }
 ```
