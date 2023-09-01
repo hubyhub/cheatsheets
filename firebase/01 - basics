@@ -24,5 +24,22 @@ Firestore is a "horizontally scaling" nosql document database in the cloud
 ### Firestore
  * a bit more organized, not just JSON
  * consists of "documents" and "collections"
+ * documents are similar to JSON objects or dictionies.
+   * they consist of key value pairs, called "fields"
+   * the values of fields can be any type of data: number, string, boolean, binary data, to smaller json looking data called "MAPS"
+ * collections are collections of documents
+
+###  Rules for Collections and Documents
+ * collections can only contain documents.. nothing else
+ * documents size can be max 1MB
+ * a document cannot contain another documents
+ * documents can point to sub-collections, but not to other documents directly
+ * Example documents in a USERS-collection can point to subcollection "Workouts"
+ * the root of a firestore tree can only contain collections
+
+```javascript
+firestore.collection(...).document(...).collections(...).document(...)
+```
+
 
 
