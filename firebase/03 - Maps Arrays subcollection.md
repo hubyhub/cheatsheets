@@ -40,10 +40,10 @@ dickens_books collectaion
 ```json
 {
  "title": "Greate Expectation",
-"chararctars": {
- "name": "Pips",
- "occupation": "Apprentice"
+ "chararctars": {
+  "name": "Pips",
+  "occupation": "Apprentice"
+ }
 }
-}
-
+```
 
