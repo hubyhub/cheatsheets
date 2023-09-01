@@ -1,1 +1,22 @@
+# Basics
+Firestore is a "horizontally scaling" nosql document database in the cloud
+[What is a NoSQL Database? How is Cloud Firestore structured? | Get to know Cloud Firestore #1](https://www.youtube.com/watch?v=v_hR4K4auoQ&list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&ab_channel=Firebase)
+
+### Traditionalnrelational SQL
+* every table has its on schema, that means every row is very strictly defined
+* you have a specific set of columns taht you can add per row
+* and every column has very strict rules about what data-type goes in there
+* because of this scheme you typically store 1 type of objet per table
+* relations between table are created with another column a "foreign key"
+
+### noSQL 
+* no tables
+* based on plain old key value, collection of json, or tree
+* all usually are schema-less. 
+  * thaat means there are no database restrictions about what data you can put in
+* no sql: 
+  * if you need object from 3 parts of the database you would need to do 3 different database requests
+  * but that should not be the way of thinking, you should put the objects in places where you need them
+  * that could mean you put duplicate data in duplicate places
+  * example separate collection for Restaurant and Reviews means 2 queries
 
