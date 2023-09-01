@@ -49,6 +49,8 @@ BMC-Collection
 
 #### Role management
 [https://youtu.be/haMOUb3KVSo?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&t=520](https://youtu.be/haMOUb3KVSo?list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&t=520)
+Who has access?
+Who can view? who can write?
 
 IN a subcollection PRIVATE DATA
 ```JSON
