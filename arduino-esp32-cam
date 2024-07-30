@@ -1,0 +1,11 @@
+1 Download
+https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_Linux_64bit.AppImage
+2 (for my computer)
+sudo nano /etc/udev/rules.d/99-usb-serial.rules
+  SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0666>="0666", GROUP="dialout"
+3
+sudo usermod -a -G dialout {USERNAME]
+4. 
+sudo apt-get remove --auto-remove brltty
+5.
+pip3 install pyserial
