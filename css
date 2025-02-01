@@ -17,3 +17,13 @@
       media="(prefers-color-scheme: light)" 
 ...
 ```
+
+
+### input numbers
+```html
+<input type="text" />
+<input type="number" />
+<input type="number"  inputmode="numeric" />
+<input type="text"  inputmode="numeric" />
+<input type="text"  inputmode="numeric" pattern="[0-9]+" />
+```
