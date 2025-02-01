@@ -19,11 +19,28 @@
 ```
 
 
-### input numbers
+### Great number input
+
 ```html
+// normal text
 <input type="text" />
+
+// [✓] better keyboard on mobile
+// [✓] input allows only numbers (forms)
+// [X] annoying arrows
 <input type="number" />
-<input type="number"  inputmode="numeric" />
-<input type="text"  inputmode="numeric" />
-<input type="text"  inputmode="numeric" pattern="[0-9]+" />
+
+// [✓] great numbers keyboard, (the big, only numbers layout)
+// [X] still annoying arrows
+<input type="number" inputmode="numeric" />
+
+// [✓] great numbers input on keyboard
+// [✓] no annoying arrows
+// [X] but no validation
+<input type="text" inputmode="numeric" />
+
+// [✓] no annoying arrows
+// [✓] great numbers input on keyboard
+// [✓] validation
+<input type="text" inputmode="numeric" pattern="[0-9]+" />
 ```
