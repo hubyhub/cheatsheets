@@ -1,9 +1,11 @@
 # CSS Tipps
 ### "Debugging" CSS
+```css
 *, *:before, *:after {
     outline: 2px solid lime;
     background: rgba(111, 11, 11, 0.5) !important;
 }
+```
 
 ### Dark / Light Favicons for light dark mode
 ```html
