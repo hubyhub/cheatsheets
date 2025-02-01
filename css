@@ -4,3 +4,16 @@
     outline: 2px solid lime;
     background: rgba(111, 11, 11, 0.5) !important;
 }
+
+### Dark / Light Favicons for light dark mode
+```html
+<html>
+<head>
+<link rel="icon"
+      href="/white.png"
+      media="(prefers-color-scheme: dark)" 
+<link rel="icon"
+      href="/dark.png"
+      media="(prefers-color-scheme: light)" 
+...
+```
