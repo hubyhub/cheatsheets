@@ -9,3 +9,14 @@ sudo usermod -a -G dialout {USERNAME]
 sudo apt-get remove --auto-remove brltty
 5.
 pip3 install pyserial
+
+
+#Documents
+GM805 Series Barcode reader module User Manual-V1.2.2 pdf
+https://www.dropbox.com/scl/fo/87hz5h82k25j3p9k5u603/APsReBwGjeRIIOTW6zuMSuw/GM805%20Series%20Barcode%20reader%20module%20User%20Manual-V1.2.2?e=1&preview=GM805+Series+Barcode+reader+module+User+Manual-V1.2.2.pdf&rlkey=2fyvdir15kb1kj2ada1zkadqt&subfolder_nav_tracking=1&dl=0
+
+https://www.youtube.com/watch?v=dsYZHYoca00&ab_channel=HangzhouGrowTechnologyCo.%2CLtd
+
+# Bestellung:
+https://de.aliexpress.com/item/1005003973658140.html?spm=a2g0o.order_list.order_list_main.5.21ef5c5fLKzfo0&gatewayAdapt=glo2deu
+GM803-S 5-30cm lens
