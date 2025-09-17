@@ -39,13 +39,13 @@ ng generate service hero
 # .ts
 ```
 ## keep Types in angular templates
-```
-# in template .html
+```javascript
+// in template .html
  <ng-template [ngIf]="identity(node)" let-node="ngIf">
   <div>{{node.propertyIsRecognized}}
  </ng-template>
 
-# in .ts
+// in .ts
   identity(value: any): MyType {
     return value as MyType;
   }
